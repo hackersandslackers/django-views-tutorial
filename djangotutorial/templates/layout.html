@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>{{title}}</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="This is a description">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#fafafa">
+  <link rel="apple-touch-icon" href="icon.png">
+
+
+    {% block styles %}
+
+    {%  endblock %}
+</head>
+
+<body class="{{template}}">
+    {% block content %}{%  endblock %}
+</body>
+
+</html>
