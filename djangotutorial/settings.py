@@ -9,7 +9,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # Basic config
 DEBUG = True
-ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'localhost', '127.0.0.1:8000']
+ALLOWED_HOSTS = ['0.0.0.0',
+                 '127.0.0.1',
+                 'localhost',
+                 '127.0.0.1:8000',
+                 'example.com',]
 WSGI_APPLICATION = 'djangotutorial.wsgi.application'
 
 # Application definition
@@ -57,13 +61,6 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',},
 ]
 
-# Internationalization
-LANGUAGE_CODE = 'en-us'
-TIME_ZONE = 'EST'
-USE_I18N = True
-USE_L10N = True
-USE_TZ = True
-
 # Base template folder & templating engine
 TEMPLATES = [
     {
@@ -88,6 +85,13 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(PROJECT_DIR, "static")
 ]
+
+# Internationalization
+LANGUAGE_CODE = 'en-us'
+TIME_ZONE = 'EST'
+USE_I18N = True
+USE_L10N = True
+USE_TZ = True
 
 # Etc.
 APPEND_SLASH = True
