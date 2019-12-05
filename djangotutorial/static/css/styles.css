@@ -29,6 +29,12 @@ p {
     padding: 50px;
 }
 
+@media(max-width:600px) {
+  .card {
+    width: 90%;
+  }
+}
+
 
 .homepage {
   text-align: center;
