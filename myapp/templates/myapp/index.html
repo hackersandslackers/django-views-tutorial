@@ -1,12 +1,12 @@
 {% extends 'layout.html' %}
 {% load static %}
 
-
-{% block styles %}
-    <link href="{% static 'css/styles.css' %}" rel="stylesheet" type="text/css">
-{%  endblock %}
-
 {% block content %}
-    <h1>Hello world!</h1>
+    <div class="card">
+        <img src="{% static 'myapp/img/logo.png' %}" alt="logo" class="logo" />
+        <h1>Hello world!</h1>
+        <p>{{ description }}</p>
+    </div>
+
 {%  endblock %}
 

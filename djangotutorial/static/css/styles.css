@@ -1,0 +1,35 @@
+body {
+  font-family: proxima-nova, sans-serif;
+  text-align: center;
+  background: #e1eaf5;
+}
+
+h1 {
+  font-family: proxima-nova, sans-serif;
+  text-transform: uppercase;
+  color: #5f6988;
+  margin: 20px 0 10px;
+  font-size: 1.5em;
+}
+
+p {
+  color: #5f6988;
+  margin: 0;
+}
+
+.logo {
+  width:50px;
+}
+
+.card {
+  background: white;
+    width: 400px;
+    margin: 80px auto 0;
+    box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);
+    padding: 50px;
+}
+
+
+.homepage {
+  text-align: center;
+}
