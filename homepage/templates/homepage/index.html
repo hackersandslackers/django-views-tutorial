@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="card">
+        <img src="{% static 'img/logo.png' %}" alt="logo" class="logo" />
+        <h1>Hacker and Slackers Django Tutorial</h1>
+        <p>{{ description }}</p>
+        <div class="apps-container">
+            {% include 'homepage/partials/function_module.html' %}
+            {% include 'homepage/partials/class_module.html' %}
+            {% include 'homepage/partials/interactive_module.html' %}
+        </div>
+    </div>
+
+{%  endblock %}

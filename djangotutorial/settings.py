@@ -1,4 +1,9 @@
 import os
+import sys
+from dotenv import load_dotenv
+
+basedir = os.path.dirname(sys.modules['__main__'].__file__)
+load_dotenv(os.path.join(basedir, '.env'))
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -12,8 +17,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['0.0.0.0',
                  '127.0.0.1',
                  'localhost',
-                 '127.0.0.1:8000',
-                 'example.com',]
+                 '127.0.0.1:8000']
 WSGI_APPLICATION = 'djangotutorial.wsgi.application'
 
 # Application definition
@@ -24,7 +28,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'myapp',
+    'homepage',
+    'simpleviews',
+    'classviews',
+    'interactive',
 ]
 
 # Added middleware
@@ -44,11 +51,12 @@ ROOT_URLCONF = 'djangotutorial.urls'
 # Database
 DATABASES = {
     'default': {
-        'ENGINE': os.environ.get('DB_ENGINE'),
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.environ.get('DB_NAME'),
         'USER': os.environ.get('DB_USER'),
         'PASSWORD': os.environ.get('DB_USER'),
-        'HOST': os.environ.get('DB_HOST'),
+        # 'HOST': os.environ.get('DB_HOST'),
+        'HOST': 'hackers-data-do-user-1142484-0.db.ondigitalocean.com',
         'PORT': os.environ.get('DB_PORT'),
     }
 }
