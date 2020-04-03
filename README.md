@@ -1,13 +1,13 @@
 # Django Views Tutorial
 
-![Python](https://img.shields.io/badge/Python-v3.8-blue.svg?logo=python&longCache=true&logoColor=white&colorB=5e81ac&style=flat-square&colorA=4c566a)
+![Python](https://img.shields.io/badge/Python-v^3.8-blue.svg?logo=python&longCache=true&logoColor=white&colorB=5e81ac&style=flat-square&colorA=4c566a)
 ![Django](https://img.shields.io/badge/Django-v^3.0.0-blue.svg?logo=Django&longCache=true&logoColor=white&colorB=a3be8c&style=flat-square&colorA=4c566a)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square&colorA=4c566a&colorB=a3be8c)
 [![GitHub Issues](https://img.shields.io/github/issues/hackersandslackers/django-views-tutorial.svg?style=flat-square&colorA=4c566a&colorB=ebcb8b)](https://github.com/hackersandslackers/bigquery-python-tutorial/issues)
 [![GitHub Stars](https://img.shields.io/github/stars/hackersandslackers/django-views-tutorial.svg?style=flat-square&colorB=ebcb8b&colorA=4c566a)](https://github.com/hackersandslackers/bigquery-python-tutorial/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/hackersandslackers/django-views-tutorial.svg?style=flat-square&colorA=4c566a&colorB=ebcb8b)](https://github.com/hackersandslackers/bigquery-python-tutorial/network)
 
-![Django Intro Tutorial](https://hackersandslackers-cdn.storage.googleapis.com/2020/02/django-views.jpg)
+![Django Intro Tutorial](https://github.com/hackersandslackers/django-views-tutorial/blob/master/.github/django-views.jpg?raw=true)
 
 A beginner's tutorial to launching a simple Django web app (part 1 of a series). This repository is the source code for the tutorial found here: https://hackersandslackers.com/getting-started-django/
 
