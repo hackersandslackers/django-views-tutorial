@@ -7,9 +7,9 @@
 [![GitHub Stars](https://img.shields.io/github/stars/hackersandslackers/django-views-tutorial.svg?style=flat-square&colorB=ebcb8b&colorA=4c566a)](https://github.com/hackersandslackers/bigquery-python-tutorial/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/hackersandslackers/django-views-tutorial.svg?style=flat-square&colorA=4c566a&colorB=ebcb8b)](https://github.com/hackersandslackers/bigquery-python-tutorial/network)
 
-![Django Views Tutorial](https://github.com/hackersandslackers/django-views-tutorial/blob/master/.github/django-views.jpg?raw=true)
+![Django Intro Tutorial](https://github.com/hackersandslackers/django-views-tutorial/blob/master/.github/django-views-1@2x.jpg?raw=true)
 
-A beginner's tutorial to launching a simple Django web app (part 2 of a series). This repository is the source code for the tutorial found here: https://hackersandslackers.com/getting-started-django/
+Your go-to reference for creating Django views (part 2 of a series). This repository contains source code for accompanying tutorial: https://hackersandslackers.com/django-views/
 
 ## Getting Started
 
@@ -32,4 +32,5 @@ $ python3 setup.py install
 $ python3 manage.py runserver
 ```
 
+-----
 **Hackers and Slackers** tutorials are free of charge. If you found this tutorial helpful, a [small donation](https://www.buymeacoffee.com/hackersslackers) would be greatly appreciated to keep us in business. All proceeds go towards coffees], and all coffee goes towards more content.
