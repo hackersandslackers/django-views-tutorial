@@ -23,7 +23,7 @@ urlpatterns = [
     path('', include('homepage.urls'), name='home'),
     path("simpleviews/", include(("simpleviews.urls", 'simpleviews'), namespace='simpleviews')),
     path("classviews/", include(("classviews.urls", 'classviews'), namespace='classviews')),
-    path("interactive/", include(("interactive.urls", 'interactive'), namespace='interactive')),
+    path("modelviews/", include(("modelviews.urls", 'modelviews'), namespace='modelviews')),
 ]
 
 if settings.DEBUG:

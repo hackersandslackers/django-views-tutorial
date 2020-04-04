@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     'homepage',
     'simpleviews',
     'classviews',
-    'interactive',
+    'modelviews',
 ]
 
 # Added middleware

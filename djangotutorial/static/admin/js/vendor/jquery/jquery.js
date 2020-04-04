@@ -3914,7 +3914,7 @@ function completed() {
 // Catch cases where $(document).ready() is called
 // after the browser event has already occurred.
 // Support: IE <=9 - 10 only
-// Older IE sometimes signals "interactive" too soon
+// Older IE sometimes signals "modelviews" too soon
 if ( document.readyState === "complete" ||
 	( document.readyState !== "loading" && !document.documentElement.doScroll ) ) {
 
