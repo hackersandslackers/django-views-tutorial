@@ -32,4 +32,5 @@ $ python3 setup.py install
 $ python3 manage.py runserver
 ```
 
+-----
 **Hackers and Slackers** tutorials are free of charge. If you found this tutorial helpful, a [small donation](https://www.buymeacoffee.com/hackersslackers) would be greatly appreciated to keep us in business. All proceeds go towards coffees], and all coffee goes towards more content.
