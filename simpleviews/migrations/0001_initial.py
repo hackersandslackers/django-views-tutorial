@@ -24,11 +24,10 @@ class Migration(migrations.Migration):
             name='User',
             fields=[
                 ('id', models.AutoField(primary_key=True, serialize=False)),
-                ('username', models.CharField(max_length=50)),
-                ('email', models.EmailField(max_length=254)),
+                ('name', models.CharField(max_length=255)),
+                ('email', models.EmailField(null=False)),
                 ('website', models.URLField()),
                 ('created_at', models.DateTimeField(default=datetime.datetime(2020, 4, 4, 2, 58, 15, 876029))),
-                ('last_seen', models.DateTimeField()),
             ],
         ),
     ]

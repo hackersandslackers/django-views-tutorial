@@ -1,0 +1,127 @@
+.users-container {
+    width: 1000px;
+    max-width: 100%;
+    height: fit-content;
+    margin: 30px auto 0;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(64, 66, 72, 0.3);
+}
+
+.users-table {
+    width: 100%;
+    background: white;
+}
+
+.users-table td {
+    min-width: 141px;
+    padding: 8px 15px;
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.users-table td span {
+    display: block;
+    max-width: 840px;
+    overflow: hidden;
+    font-size: .9em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.users-table .value-cell span {
+    width: 90%;
+}
+
+.users-table th {
+    min-width: 141px;
+    padding: 30px 20px;
+    border-bottom: 1px solid #e6e6e6;
+    font-weight: 600;
+
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.user-form {
+    border: 0;
+    background: white;
+    padding: 20px 0;
+    box-shadow: 0 0 15px rgba(64, 66, 72, 0.3);
+    width: 1000px;
+    margin: 30px auto 0;
+}
+
+fieldset {
+    border: 0;
+}
+
+input[type="number"] {
+    -webkit-appearance: none;
+    width: -webkit-fill-available;
+    padding: 5px;
+    border: 1px solid #e8ebed;
+    border-radius: 3px;
+    outline: none;
+    background: #ebeff3;
+    font-size: 1em;
+    transition: all .2s ease-out;
+    width: 50px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+input[type="number"]:hover {
+    border-color: #6baaf2 !important;
+    background: #dde9f5 !important;
+    cursor: text !important;
+}
+
+input[type="number"]:hover::placeholder {
+    color: #8ba6c7 !important;
+}
+
+input[type="number"]:focus {
+    border-color: #6baaf2 !important;
+    background: white !important;
+}
+
+input[type="submit"] {
+    -webkit-appearance: none;
+    width: 350px;
+    padding: 10px;
+    border: 1px solid #5db9d7;
+    border-radius: 3px;
+    background: white;
+    color: #5db9d7;
+    font-size: .9em;
+    text-transform: uppercase;
+    transition: all .2s ease;
+    margin-top: 5px;
+}
+
+input[type="submit"]:hover {
+    background: #5db9d7;
+    color: white;
+    cursor: pointer;
+}
+
+.messages {
+    position: relative;
+}
+
+.messages .success {
+    padding: 10px;
+    font-weight: 500;
+    border-radius: 4px;
+    background: #c7e3c0;
+    color: #70896a;
+    width: 321px;
+    margin: auto;
+    font-size: .9em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -52px;
+}

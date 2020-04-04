@@ -3,12 +3,13 @@ from django.views.decorators.http import require_http_methods
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import User, GuestMessage
-from .forms import GuestBookForm
+from .forms import GuestBookForm, ViewUserProfile
 
 
 @require_http_methods(["GET"])
 def get_template(request):
-    context = {'received_headers': request.headers.items(),
+    context = {'title': 'Basic GET View',
+               'received_headers': request.headers.items(),
                'client_cookies': request.COOKIES,
                'path': request.get_full_path()}
     return render(request, 'simpleviews/get.html', context)
@@ -24,13 +25,26 @@ def form_view(request):
             return HttpResponseRedirect('form')
     else:
         form = GuestBookForm()
-
-    context = {'form': form, 'path': request.get_full_path(), 'entries': GuestMessage.objects.all()}
+    context = {'title': 'Form View',
+               'form': form,
+               'path': request.get_full_path(),
+               'entries': GuestMessage.objects.all()}
     return render(request, 'simpleviews/form.html', context)
 
 
-@require_http_methods(["GET"])
-def get_or_404_view(request):
-    obj = get_object_or_404(User, pk=1)
-    context = {'user': obj}
-    return render(request, 'simpleviews/form.html', context)
+@require_http_methods(["GET", "POST"])
+def users(request):
+    users = User.objects.all()
+    if request.method == 'POST':
+        form = ViewUserProfile(request.POST)
+        if form.is_valid():
+            get_object_or_404(User, id=form.cleaned_data.get('id'))
+            messages.success(request, 'You picked a valid user ID! Now try an invalid one.')
+            return HttpResponseRedirect('users')
+    else:
+        form = ViewUserProfile()
+    context = {'title': 'Users (Get or 404)',
+                'form': form,
+                'users': users,
+                'path': request.get_full_path()}
+    return render(request, 'simpleviews/users.html', context)

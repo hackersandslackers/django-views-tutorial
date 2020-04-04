@@ -1,139 +1,135 @@
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    font-family: proxima-nova, sans-serif;
-    text-align: center;
-    background: #e1eaf5;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  margin: 0;
+  background: #e1eaf5;
+  font-family: proxima-nova, sans-serif;
+  text-align: center;
 }
 
 .viewport {
-    width: 100%;
-    margin-right: 30px;
-
+  width: 100%;
+  margin-right: 30px;
 }
 
 #djDebug #djDebugToolbar {
-    position: relative !important;
-    height: 100%;
-    width: 250px !important;
-    right: 38px !important;
+  position: relative !important;
+  right: 38px !important;
+  width: 250px !important;
+  height: 100%;
 }
 
 h1 {
-    font-family: proxima-nova, sans-serif;
-    text-transform: uppercase;
-    color: #5f6988;
-    margin: 20px 0 3px;
-    font-size: 2em;
-    line-height: 1;
+  margin: 20px 0 3px;
+  color: #5f6988;
+  font-family: proxima-nova, sans-serif;
+  font-size: 2em;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
-
-
 p {
-    color: #5f6988;
-    margin: 0;
-    font-size: 1.2em;
+  margin: 0;
+  color: #5f6988;
+  font-size: 1.2em;
 }
 
 a {
-    text-decoration: none;
-    color: #79aec8;
-    font-weight: 500;
-    transition: all .2s ease;
+  color: #79aec8;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all .2s ease;
 }
 
-a:hover{
-    cursor: pointer;
-    color: mediumturquoise;
+a:hover {
+  color: mediumturquoise;
+  cursor: pointer;
 }
 
 .logo {
-    width: 50px;
+  width: 50px;
 }
 
 .card {
-    background: white;
-    width: 1000px;
-    margin: 80px auto 0;
-    box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);
-    padding: 50px;
-    height: fit-content;
-    max-width: 95%;
+  width: 1000px;
+  max-width: 95%;
+  height: fit-content;
+  margin: 80px auto 0;
+  padding: 50px;
+  background: white;
+  box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);
 }
 
 @media(max-width: 800px) {
-    .card {
-        padding: 50px 0;
-    }
+  .card {
+    padding: 50px 0;
+  }
 
-    .apps-container {
-        justify-content: space-between;
-    }
+  .apps-container {
+    justify-content: space-between;
+  }
 
-    .app {
-        width: 25%;
-    }
+  .app {
+    width: 25%;
+  }
 
-    h2 {
-        font-size: 1.1em;
-    }
+  h2 {
+    font-size: 1.1em;
+  }
 }
 
 .apps-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    margin-top: 50px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-top: 50px;
 }
 
 .app {
-    width: 22%;
+  width: 22%;
 }
 
 ul {
-    list-style: none;
-    padding: 0;
-    text-align: left;
+  padding: 0;
+  list-style: none;
+  text-align: left;
 }
 
 li {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 @media (max-width: 1000px) {
-    .viewport {
-        margin: 0 auto;
-        max-width: 93%;
-    }
+  .viewport {
+    max-width: 93%;
+    margin: 0 auto;
+  }
 
-    #djDebug {
-        display: none !important;
-    }
-
+  #djDebug {
+    display: none !important;
+  }
 }
 
 @media (max-width: 600px) {
-    .card {
-        width: 90%;
-    }
+  .card {
+    width: 90%;
+  }
 }
 
 .homepage {
-    text-align: center;
+  text-align: center;
 }
 
 .success {
-    background: #c7e3c0;
-    padding: 12px 14px;
-    border-radius: 5px;
-    border: 1px solid #acc8a7;
-    color: #809b7a;
-    width: -webkit-fill-available;
+  width: -webkit-fill-available;
+  padding: 12px 14px;
+  border: 1px solid #acc8a7;
+  border-radius: 5px;
+  background: #c7e3c0;
+  color: #809b7a;
 }
