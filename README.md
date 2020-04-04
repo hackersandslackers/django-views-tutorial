@@ -9,7 +9,7 @@
 
 ![Django Intro Tutorial](https://github.com/hackersandslackers/django-views-tutorial/blob/master/.github/django-views.jpg?raw=true)
 
-A beginner's tutorial to launching a simple Django web app (part 2 of a series). This repository is the source code for the tutorial found here: https://hackersandslackers.com/getting-started-django/
+A beginner's tutorial to launching a simple Django web app (part 2 of a series). This repository is the source code for the tutorial found here: https://hackersandslackers.com/django-views/
 
 ## Getting Started
 
