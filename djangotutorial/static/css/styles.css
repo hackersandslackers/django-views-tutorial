@@ -83,27 +83,6 @@ a:hover {
   }
 }
 
-.apps-container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-  margin-top: 50px;
-}
-
-.app {
-  width: 22%;
-}
-
-ul {
-  padding: 0;
-  list-style: none;
-  text-align: left;
-}
-
-li {
-  margin-bottom: 5px;
-}
-
 @media (max-width: 1000px) {
   .viewport {
     max-width: 93%;
@@ -119,10 +98,6 @@ li {
   .card {
     width: 90%;
   }
-}
-
-.homepage {
-  text-align: center;
 }
 
 .success {

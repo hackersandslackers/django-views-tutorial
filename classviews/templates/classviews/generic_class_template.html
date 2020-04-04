@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static '' %}">
+{% endblock %}
+
+
+{% block content %}
+    <div class="viewport">
+        {% include 'simpleviews/partials/header.html' %}
+
+    </div>
+{% endblock %}
