@@ -9,3 +9,10 @@ class User(models.Model):
     website = models.URLField()
     created_at = models.DateTimeField(default=datetime.now())
     last_seen = models.DateTimeField()
+
+
+class GuestMessage(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=255)
+    message = models.TextField()
+    created_at = models.DateTimeField(default=datetime.now())

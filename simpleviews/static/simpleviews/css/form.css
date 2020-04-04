@@ -1,0 +1,102 @@
+.form-container {
+    max-width: 100%;
+    margin: 50px auto 0;
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    border: 0;
+}
+
+.guest-form {
+    box-shadow: 0 0 10px rgba(64, 66, 72, 0.2);
+    background: white;
+    padding: 20px;
+    min-width: 330px;
+    border-radius: 5px;
+}
+
+h2 {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #4e566b;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-container form {
+    width: 100%;
+}
+
+.form-container fieldset {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border: 0;
+    padding: 0;
+}
+
+.form-container input[type="text"] {
+    padding: 10px;
+    border: 1px solid #e8ebed;
+    border-radius: 3px;
+    background: #ebeff3;
+    -webkit-appearance: none;
+    transition: all .2s ease-out;
+    width: -webkit-fill-available;
+    outline: none;
+    font-size: 1.1em;
+}
+
+input[type="submit"] {
+    color: white;
+    -webkit-appearance: none;
+    background: #5db9d7;
+    padding: 8px 10px;
+    font-size: 1em;
+    text-transform: uppercase;
+    border-radius: 3px;
+    border: 0;
+}
+
+.guestbook {
+    width: 100%;
+    margin-left: 35px;
+}
+
+label {
+    opacity: .6;
+    margin-bottom: 4px;
+}
+
+.entry {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 10px rgba(64, 66, 72, 0.1);
+}
+
+.entry-message {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.entry-name {
+    font-style: italic;
+    color: #9b9b9b;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.entry-date {
+    font-style: italic;
+    color: #9b9b9b;
+    font-size: .9em;
+}

@@ -1,13 +1,11 @@
-h1 {
-    margin-top: 50px;
-}
 
-.container {
+.get-container {
     max-width: 100%;
     overflow: hidden;
     margin: 50px auto 0;
-    width: 1100px;
+    width: 1000px;
     box-shadow: 0 0 15px rgba(64, 66, 72, 0.3);
+    height: fit-content;
 }
 
 .header-table {
@@ -17,7 +15,7 @@ h1 {
 
 .header-table td {
     text-align: left;
-    padding: 10px 15px;
+    padding: 8px 15px;
     min-width: 141px;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -30,6 +28,7 @@ h1 {
     display: block;
     overflow: hidden;
     max-width: 840px;
+    font-size: .9em;
 }
 
 .header-table .value-cell span {
@@ -37,9 +36,9 @@ h1 {
 }
 
 .header-table th {
-    padding: 20px;
+    padding: 30px 20px;
     text-align: left;
-    background: #e1e7f3;
+    border-bottom: 1px solid #e6e6e6;
     font-weight: 600;
     text-transform: uppercase;
     min-width: 141px;

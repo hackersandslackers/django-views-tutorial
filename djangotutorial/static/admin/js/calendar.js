@@ -82,7 +82,7 @@ depends on core.js for utility functions like removeChildren or quickElement
             quickElement('caption', calTable, CalendarNamespace.monthsOfYear[month - 1] + ' ' + year);
             var tableBody = quickElement('tbody', calTable);
 
-            // Draw days-of-week header
+            // Draw days-of-week header.html
             var tableRow = quickElement('tr', tableBody);
             for (var i = 0; i < 7; i++) {
                 quickElement('th', tableRow, CalendarNamespace.daysOfWeek[(i + CalendarNamespace.firstDayOfWeek) % 7]);

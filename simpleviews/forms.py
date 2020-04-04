@@ -1,5 +1,6 @@
 from django import forms
 
 
-class UserForm(forms.Form):
-    name = forms.CharField(required=True, label="Search for username.", strip=True)
+class GuestBookForm(forms.Form):
+    name = forms.CharField(required=True, label="Your name", strip=True)
+    message = forms.CharField(required=True, label="Your message to the world", strip=True)

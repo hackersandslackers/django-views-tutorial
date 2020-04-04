@@ -1,0 +1,9 @@
+h2 {
+    font-size: 1.3em;
+    font-weight: 500;
+    border-bottom: 1px solid #d7d7d7;
+    color: #5f6988;
+    padding-bottom: 5px;
+    flex-grow: unset;
+    text-align: left;
+}

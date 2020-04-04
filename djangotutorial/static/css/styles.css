@@ -22,6 +22,7 @@ body {
     position: relative !important;
     height: 100%;
     width: 250px !important;
+    right: 38px !important;
 }
 
 h1 {
@@ -33,15 +34,7 @@ h1 {
     line-height: 1;
 }
 
-h2 {
-    font-size: 1.3em;
-    font-weight: 500;
-    border-bottom: 1px solid #d7d7d7;
-    color: #5f6988;
-    padding-bottom: 5px;
-    flex-grow: unset;
-    text-align: left;
-}
+
 
 p {
     color: #5f6988;
@@ -53,6 +46,12 @@ a {
     text-decoration: none;
     color: #79aec8;
     font-weight: 500;
+    transition: all .2s ease;
+}
+
+a:hover{
+    cursor: pointer;
+    color: mediumturquoise;
 }
 
 .logo {
@@ -128,4 +127,13 @@ li {
 
 .homepage {
     text-align: center;
+}
+
+.success {
+    background: #c7e3c0;
+    padding: 12px 14px;
+    border-radius: 5px;
+    border: 1px solid #acc8a7;
+    color: #809b7a;
+    width: -webkit-fill-available;
 }

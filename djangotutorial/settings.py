@@ -107,3 +107,5 @@ USE_TZ = True
 
 # Etc.
 APPEND_SLASH = True
+
+GITHUB_REPO = 'Demo for creating views in Django (View on <a href="https://github.com/hackersandslackers/django-views-tutorial">Github</a>).'
