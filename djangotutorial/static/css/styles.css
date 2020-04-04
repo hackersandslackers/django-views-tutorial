@@ -1,7 +1,27 @@
+html {
+    height: 100%;
+}
+
 body {
     font-family: proxima-nova, sans-serif;
     text-align: center;
     background: #e1eaf5;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.viewport {
+    width: 100%;
+    margin-right: 30px;
+
+}
+
+#djDebug #djDebugToolbar {
+    position: relative !important;
+    height: 100%;
+    width: 250px !important;
 }
 
 h1 {
@@ -45,6 +65,26 @@ a {
     margin: 80px auto 0;
     box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);
     padding: 50px;
+    height: fit-content;
+    max-width: 95%;
+}
+
+@media(max-width: 800px) {
+    .card {
+        padding: 50px 0;
+    }
+
+    .apps-container {
+        justify-content: space-between;
+    }
+
+    .app {
+        width: 25%;
+    }
+
+    h2 {
+        font-size: 1.1em;
+    }
 }
 
 .apps-container {
@@ -65,7 +105,19 @@ ul {
 }
 
 li {
-    margin-bottom: 3px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 1000px) {
+    .viewport {
+        margin: 0 auto;
+        max-width: 93%;
+    }
+
+    #djDebug {
+        display: none !important;
+    }
+
 }
 
 @media (max-width: 600px) {

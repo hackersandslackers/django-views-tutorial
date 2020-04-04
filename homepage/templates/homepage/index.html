@@ -4,7 +4,7 @@
 {% block content %}
     <div class="card">
         <img src="{% static 'img/logo.png' %}" alt="logo" class="logo" />
-        <h1>Hacker and Slackers Django Tutorial</h1>
+        <h1>{{ title }}</h1>
         <p>{{ description }}</p>
         <div class="apps-container">
             {% include 'homepage/partials/function_module.html' %}

@@ -7,8 +7,10 @@ verify_ssl = true
 
 [packages]
 django = "*"
-mysqlclient = "*"
 python-dotenv = "*"
+mysqlclient = "*"
+django-debug-toolbar= "*"
+django-static-precompiler = "*"
 
 [requires]
 python_version = "3.8"

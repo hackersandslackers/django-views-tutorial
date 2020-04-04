@@ -18,6 +18,8 @@ ALLOWED_HOSTS = ['0.0.0.0',
                  '127.0.0.1',
                  'localhost',
                  '127.0.0.1:8000']
+
+INTERNAL_IPS = ['127.0.0.1',]
 WSGI_APPLICATION = 'djangotutorial.wsgi.application'
 
 # Application definition
@@ -28,6 +30,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'debug_toolbar',
     'homepage',
     'simpleviews',
     'classviews',
@@ -43,6 +46,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 # URLs
@@ -51,13 +55,13 @@ ROOT_URLCONF = 'djangotutorial.urls'
 # Database
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': os.environ.get('DB_NAME'),
         'USER': os.environ.get('DB_USER'),
-        'PASSWORD': os.environ.get('DB_USER'),
-        # 'HOST': os.environ.get('DB_HOST'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
         'HOST': 'hackers-data-do-user-1142484-0.db.ondigitalocean.com',
         'PORT': os.environ.get('DB_PORT'),
+        'OPTIONS': {'ssl': {'pem': '/creds/ca-certificate.crt'}}
     }
 }
 

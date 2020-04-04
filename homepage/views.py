@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 def index(request):
     context = {'template': 'homepage',
-               'title': 'My Django App',
-               'description': 'You\'ve launched your first Django app! You\'re the best.'}
+               'title': 'Django Views Tutorial',
+               'description': 'Reference/cheatsheet for creating views in Django.'}
     return render(request, 'homepage/index.html', context)
 
