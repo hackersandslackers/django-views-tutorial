@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class InteractiveConfig(AppConfig):
-    name = 'modelviews'
+    name = 'model_views'

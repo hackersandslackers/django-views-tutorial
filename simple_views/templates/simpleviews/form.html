@@ -14,7 +14,7 @@
             <div class="guest-form">
                 <h2>Leave a message!</h2>
                 <div class="form-wrapper">
-                    <form action="{% url 'simpleviews:form' %}" method="post" class="">
+                    <form action="{% url 'simple_views:form' %}" method="post" class="">
                         {% csrf_token %}
                         {% include 'simpleviews/partials/messages.html' %}
                         {% for field in form %}

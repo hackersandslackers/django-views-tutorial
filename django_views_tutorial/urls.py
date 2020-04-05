@@ -1,4 +1,4 @@
-"""djangotutorial URL Configuration
+"""django_views_tutorial URL Configuration
 from django.urls import include, path
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -21,9 +21,9 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('homepage.urls'), name='home'),
-    path("simpleviews/", include(("simpleviews.urls", 'simpleviews'), namespace='simpleviews')),
-    path("classviews/", include(("classviews.urls", 'classviews'), namespace='classviews')),
-    path("modelviews/", include(("modelviews.urls", 'modelviews'), namespace='modelviews')),
+    path("simple_views/", include(("simple_views.urls", 'simple_views'), namespace='simple_views')),
+    path("class_views/", include(("class_views.urls", 'class_views'), namespace='class_views')),
+    path("model_views/", include(("model_views.urls", 'model_views'), namespace='model_views')),
 ]
 
 if settings.DEBUG:

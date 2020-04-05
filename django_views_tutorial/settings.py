@@ -20,7 +20,7 @@ ALLOWED_HOSTS = ['0.0.0.0',
                  '127.0.0.1:8000']
 
 INTERNAL_IPS = ['127.0.0.1',]
-WSGI_APPLICATION = 'djangotutorial.wsgi.application'
+WSGI_APPLICATION = 'django_views_tutorial.wsgi.application'
 
 # Application definition
 INSTALLED_APPS = [
@@ -32,9 +32,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'debug_toolbar',
     'homepage',
-    'simpleviews',
-    'classviews',
-    'modelviews',
+    'simple_views',
+    'class_views',
+    'model_views',
 ]
 
 # Added middleware
@@ -50,7 +50,7 @@ MIDDLEWARE = [
 ]
 
 # URLs
-ROOT_URLCONF = 'djangotutorial.urls'
+ROOT_URLCONF = 'django_views_tutorial.urls'
 
 # Database
 DATABASES = {
@@ -77,7 +77,7 @@ AUTH_PASSWORD_VALIDATORS = [
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        "DIRS": [os.path.join(BASE_DIR, "djangotutorial/templates/")],
+        "DIRS": [os.path.join(BASE_DIR, "django_views_tutorial/templates/")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -12,7 +12,7 @@ from datetime import datetime
 class GenericClassView(View):
     form_class = ContactForm
     initial = {'key': 'value'}
-    template_name = 'classviews/form_class_template.html'
+    template_name = 'class_views/form_class_template.html'
 
     def get(self, request, *args, **kwargs):
         form = self.form_class(initial=self.initial)

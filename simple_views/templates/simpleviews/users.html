@@ -36,7 +36,7 @@
         </div>
 
         <div class="user-form">
-        <form action="{% url 'simpleviews:users' %}" method="post" class="">
+        <form action="{% url 'simple_views:users' %}" method="post" class="">
             {% csrf_token %}
             {% include 'simpleviews/partials/messages.html' %}
             {% for field in form %}
