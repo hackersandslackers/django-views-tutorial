@@ -3,14 +3,14 @@
 
 
 {% block extra_css %}
-    <link rel="stylesheet" type="text/css" href="{% static 'simpleviews/css/header.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'simpleviews/css/users.css' %}">
 {% endblock %}
 
 
 {% block content %}
     <div class="viewport">
-        {% include 'simpleviews/partials/header.html' %}
+        {% include 'partials/header.html' %}
 
         <div class="users-container">
             <table class="users-table">
@@ -38,7 +38,7 @@
         <div class="user-form">
         <form action="{% url 'simple_views:users' %}" method="post" class="">
             {% csrf_token %}
-            {% include 'simpleviews/partials/messages.html' %}
+            {% include 'partials/messages.html' %}
             {% for field in form %}
                 <fieldset>
                     {{ field.errors }}

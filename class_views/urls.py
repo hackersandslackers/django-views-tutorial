@@ -7,5 +7,5 @@ urlpatterns = [
     path('template', views.TemplateClassView.as_view(), name='template_view'),
     path('list', views.ProtectedClassView.as_view(), name='protected_view'),
     path('redirect', views.RedirectClassView.as_view(), name='redirect_view'),
-    path('detail', views.ContactView.as_view(), name='contact_view'),
+    path('contact', views.ContactView.as_view(), name='contact_view'),
 ]

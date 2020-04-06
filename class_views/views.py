@@ -54,12 +54,26 @@ class RedirectClassView(RedirectView):
 
 
 class ContactView(FormView):
-    template_name = 'contact.html'
+    template_name = 'class_views/contact_class_template.html'
     form_class = ContactForm
-    success_url = '/thanks/'
+    success_url = '/contact/'
+
+    def get(self, request, *args, **kwargs):
+        context = self.get_context_data(**kwargs)
+        return render(self.request, self.template_name, context)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Contact Form'
+        context['path'] = self.template_name
+        return context
 
     def form_valid(self, form):
         # This method is called when valid form data has been POSTed.
         # It should return an HttpResponse.
         form.send_email()
         return super().form_valid(form)
+
+    def form_invalid(self, form):
+        """If the form is invalid, render the invalid form."""
+        return self.render_to_response(self.get_context_data(form=form))

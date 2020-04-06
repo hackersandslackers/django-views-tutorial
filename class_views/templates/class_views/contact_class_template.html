@@ -3,21 +3,22 @@
 
 
 {% block extra_css %}
-    <link rel="stylesheet" type="text/css" href="{% static '' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/header.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/contact.css' %}">
 {% endblock %}
 
 
 {% block content %}
     <div class="viewport">
-        {% include 'header.html' %}
-        <div class="form-container">
+        {% include 'partials/header.html' %}
+        <div class="card">
 
-            <div class="guest-form">
-                <h2>Get in touch!</h2>
+            <div class="contact-form">
+                <h2>Send us a message!</h2>
                 <div class="form-wrapper">
-                    <form action="{% url 'simple_views:form' %}" method="post">
+                    <form action="{% url 'class_views:contact_view' %}" method="post">
                         {% csrf_token %}
-                        {% include 'messages.html' %}
+                        {% include 'partials/messages.html' %}
                         {% for field in form %}
                             <fieldset>
                                 {{ field.errors }}

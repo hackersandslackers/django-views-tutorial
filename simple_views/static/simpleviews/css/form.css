@@ -35,68 +35,9 @@ h2 {
   width: 100%;
 }
 
-.form-container fieldset {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-  padding: 0;
-  border: 0;
-}
-
-.form-container input[type="text"] {
-  -webkit-appearance: none;
-  width: -webkit-fill-available;
-  padding: 10px;
-  border: 1px solid #e8ebed;
-  border-radius: 3px;
-  outline: none;
-  background: #ebeff3;
-  font-size: 1.1em;
-  transition: all .2s ease-out;
-}
-
-.form-container input[type="text"]:hover {
-  border-color: #6baaf2 !important;
-  background: #dde9f5 !important;
-  cursor: text !important;
-}
-
-.form-container input[type="text"]:hover::placeholder {
-  color: #8ba6c7 !important;
-}
-
-.form-container input[type="text"]:focus {
-  border-color: #6baaf2 !important;
-  background: white !important;
-}
-
-input[type="submit"] {
-  -webkit-appearance: none;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #5db9d7;
-  border-radius: 3px;
-  background: #5db9d7;
-  color: white;
-  font-size: 1em;
-  text-transform: uppercase;
-  transition: all .2s ease;
-}
-
-input[type="submit"]:hover {
-  background: white;
-  color: #5db9d7;
-  cursor: pointer;
-}
-
 .guestbook {
   width: 100%;
   margin-left: 35px;
-}
-
-label {
-  margin-bottom: 4px;
-  opacity: .6;
 }
 
 .entry {
