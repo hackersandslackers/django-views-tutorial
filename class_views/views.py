@@ -4,6 +4,7 @@ from django.views.generic import TemplateView, RedirectView
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.views.generic.edit import FormView
+from django.core.mail import send_mail
 from .forms import ContactForm
 from .models import PostModel
 from datetime import datetime
@@ -69,10 +70,13 @@ class ContactView(FormView):
         return context
 
     def form_valid(self, form):
-        # This method is called when valid form data has been POSTed.
-        # It should return an HttpResponse.
-        form.send_email()
-        return super().form_valid(form)
+        send_mail(
+            form.cleaned_data.get('subject'),
+            form.cleaned_data.get('email'),
+            form.cleaned_data.get('message'),
+            ['bro@example.com'],
+            fail_silently=True,
+        )
 
     def form_invalid(self, form):
         """If the form is invalid, render the invalid form."""

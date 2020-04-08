@@ -47,7 +47,7 @@
 .user-form {
     border: 0;
     background: white;
-    padding: 20px 0;
+    padding: 30px 0;
     box-shadow: 0 0 15px rgba(64, 66, 72, 0.3);
     width: 1000px;
     margin: 30px auto 0;
@@ -55,6 +55,12 @@
 
 fieldset {
     border: 0;
+    margin: 0;
+}
+
+label {
+    text-align: center;
+    width: 100%;
 }
 
 input[type="number"] {
@@ -65,10 +71,10 @@ input[type="number"] {
     border-radius: 3px;
     outline: none;
     background: #ebeff3;
-    font-size: 1em;
+    font-size: 1.5em;
     transition: all .2s ease-out;
-    width: 50px;
-    margin-left: 5px;
+    width: 70px;
+    margin: 15px auto;
     text-align: center;
 }
 
@@ -89,7 +95,7 @@ input[type="number"]:focus {
 
 input[type="submit"] {
     -webkit-appearance: none;
-    width: 350px;
+    width: 250px;
     padding: 10px;
     border: 1px solid #5db9d7;
     border-radius: 3px;
@@ -98,7 +104,6 @@ input[type="submit"] {
     font-size: .9em;
     text-transform: uppercase;
     transition: all .2s ease;
-    margin-top: 5px;
 }
 
 input[type="submit"]:hover {
@@ -112,16 +117,17 @@ input[type="submit"]:hover {
 }
 
 .messages .success {
-    padding: 10px;
+    padding: 12px 15px;
+    font-size: 1em;
     font-weight: 500;
     border-radius: 4px;
     background: #c7e3c0;
     color: #70896a;
-    width: 321px;
+    width: 358px;
     margin: auto;
-    font-size: .9em;
     position: absolute;
     left: 0;
     right: 0;
-    top: -52px;
+    top: -69px;
+    list-style: none;
 }

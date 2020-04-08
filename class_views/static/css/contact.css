@@ -16,6 +16,9 @@ h2 {
   color: #4e566b;
   font-size: 1.5em;
   font-weight: 600;
-    text-align: left;
+   text-align: left;
 }
 
+.errorlist {
+    list-style: none;
+}

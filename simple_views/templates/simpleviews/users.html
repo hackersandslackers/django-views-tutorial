@@ -36,20 +36,20 @@
         </div>
 
         <div class="user-form">
-        <form action="{% url 'simple_views:users' %}" method="post" class="">
-            {% csrf_token %}
-            {% include 'partials/messages.html' %}
-            {% for field in form %}
-                <fieldset>
-                    {{ field.errors }}
-                    {{ field.label_tag }} {{ field }}
-                    {% if field.help_text %}
-                        <p class="help">{{ field.help_text|safe }}</p>
-                    {% endif %}
-                </fieldset>
-            {%  endfor %}
-        <input type="submit" value="Submit">
-        </form>
+            <form action="{% url 'simple_views:users' %}" method="post" class="">
+                {% csrf_token %}
+                {% include 'partials/messages.html' %}
+                {% for field in form %}
+                    <fieldset>
+                        {{ field.errors }}
+                        {{ field.label_tag }} {{ field }}
+                        {% if field.help_text %}
+                            <p class="help">{{ field.help_text|safe }}</p>
+                        {% endif %}
+                    </fieldset>
+                {%  endfor %}
+            <input type="submit" value="View Profile">
+            </form>
         </div>
     </div>
 {% endblock %}
