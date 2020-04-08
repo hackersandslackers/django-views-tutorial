@@ -3,6 +3,7 @@ from datetime import datetime
 
 
 class User(models.Model):
+    """Data model representing user information."""
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50)
     email = models.EmailField(null=False)
@@ -11,6 +12,7 @@ class User(models.Model):
 
 
 class GuestMessage(models.Model):
+    """Data model representing messages left by users in a guest book."""
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
     message = models.TextField()

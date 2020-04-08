@@ -1,10 +1,14 @@
 <div class="app">
-    <h2>Class Views</h2>
+    <div>
+        <span class="part-title">Part 2</span>
+        <h2>Class Views</h2>
+    </div>
+
     <ul>
-        <li><a href="{% url 'class_views:generic_view' %}">Generic View</a></li>
-        <li><a href="{% url 'class_views:template_view' %}">Template View</a></li>
-        <li><a href="{% url 'class_views:protected_view' %}">Protected View</a></li>
-        <li><a href="{% url 'class_views:redirect_view' %}">Redirect View</a></li>
-        <li><a href="{% url 'class_views:contact_view' %}">Contact View</a></li>
+        <li><a href="{% url 'class_views:generic_view' %}" class="disabled">Generic View</a></li>
+        <li><a href="{% url 'class_views:template_view' %}" class="disabled">Template View</a></li>
+        <li><a href="{% url 'class_views:protected_view' %}" class="disabled">Protected View</a></li>
+        <li><a href="{% url 'class_views:redirect_view' %}" class="disabled">Redirect View</a></li>
+        <li><a href="{% url 'class_views:contact_view' %}" class="disabled">Contact View</a></li>
     </ul>
 </div>

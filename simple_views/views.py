@@ -44,7 +44,7 @@ def users(request):
     else:
         form = ViewUserProfile()
     context = {'title': 'Users (Get or 404)',
-                'form': form,
-                'users': users,
-                'path': request.get_full_path()}
+               'form': form,
+               'users': users,
+               'path': request.get_full_path()}
     return render(request, 'simpleviews/users.html', context)

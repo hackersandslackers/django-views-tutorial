@@ -10,6 +10,15 @@ h2 {
     padding-bottom: 5px;
     flex-grow: unset;
     text-align: left;
+    margin-top: 0;
+}
+
+.part-title {
+    text-align: left;
+    color: #8d97bc;
+    display: block;
+    font-weight: 600;
+    font-size: .9em;
 }
 
 .apps-container {

@@ -1,23 +1,27 @@
+from datetime import datetime
+
 from django.http import HttpResponseRedirect
+from django.conf import settings
+
 from django.views import View
-from django.views.generic import TemplateView, RedirectView
+from django.views.generic import RedirectView
+from django.views.generic.base import TemplateView
+from django.views.generic.edit import FormView
+
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.mixins import PermissionRequiredMixin
-from django.views.generic.edit import FormView
 from django.core.mail import send_mail
+
 from .forms import ContactForm
 from .models import PostModel
-from datetime import datetime
 
 
 class GenericClassView(View):
-    form_class = ContactForm
     initial = {'key': 'value'}
-    template_name = 'class_views/form_class_template.html'
 
     def get(self, request, *args, **kwargs):
-        form = self.form_class(initial=self.initial)
-        return render(request, self.template_name, {'form': form})
+        posts = PostModel.get
+        return render(request, self.template_name, {'form': 'tbh'})
 
     def post(self, request, *args, **kwargs):
         form = self.form_class(request.POST)
@@ -28,10 +32,14 @@ class GenericClassView(View):
 
 
 class TemplateClassView(TemplateView):
+    template_name = 'class_views/template_class_view.html'
+
     # change the get method to get_context_data
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['now'] = datetime.now()
+        context['title'] = 'Class-based Template View'
+        context['path'] = self.template_name
         return context
 
 
@@ -57,24 +65,23 @@ class RedirectClassView(RedirectView):
 class ContactView(FormView):
     template_name = 'class_views/contact_class_template.html'
     form_class = ContactForm
-    success_url = '/contact/'
+    success_url = '/success/'
 
     def get(self, request, *args, **kwargs):
         context = self.get_context_data(**kwargs)
         return render(self.request, self.template_name, context)
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['title'] = 'Contact Form'
-        context['path'] = self.template_name
-        return context
-
     def form_valid(self, form):
+        self.send_email_message(form.cleaned_data)
+        return super(ContactView, self).form_valid(form)
+
+    @staticmethod
+    def send_email_message(valid_data):
         send_mail(
-            form.cleaned_data.get('subject'),
-            form.cleaned_data.get('email'),
-            form.cleaned_data.get('message'),
-            ['bro@example.com'],
+            valid_data.get('subject'),
+            valid_data.get('email'),
+            valid_data.get('message'),
+            [settings.SENDGRID_TO_EMAIL],
             fail_silently=True,
         )
 

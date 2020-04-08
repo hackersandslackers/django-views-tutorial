@@ -4,12 +4,15 @@
 
 {% block extra_css %}
     <link rel="stylesheet" type="text/css" href="{% static '/css/header.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/template.css' %}">
 {% endblock %}
 
 
 {% block content %}
     <div class="viewport">
         {% include 'partials/header.html' %}
-
+        <div class="card">
+            {{now}}
+         </div>
     </div>
 {% endblock %}

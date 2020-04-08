@@ -25,13 +25,3 @@ urlpatterns = [
     path("class_views/", include(("class_views.urls", 'class_views'), namespace='class_views')),
     path("model_views/", include(("model_views.urls", 'model_views'), namespace='model_views')),
 ]
-
-if settings.DEBUG:
-    import debug_toolbar
-    urlpatterns = [
-        path('__debug__/', include(debug_toolbar.urls)),
-
-        # For django versions before 2.0:
-        # url(r'^__debug__/', include(debug_toolbar.urls)),
-
-    ] + urlpatterns
