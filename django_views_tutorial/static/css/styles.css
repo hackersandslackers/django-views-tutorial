@@ -17,13 +17,6 @@ body {
   margin-right: 30px;
 }
 
-#djDebug #djDebugToolbar {
-  position: relative !important;
-  right: 38px !important;
-  width: 250px !important;
-  height: 100%;
-}
-
 h1 {
   margin: 20px 0 3px;
   color: #5f6988;
@@ -88,10 +81,6 @@ a:hover {
     max-width: 93%;
     margin: 0 auto;
   }
-
-  #djDebug {
-    display: none !important;
-  }
 }
 
 @media (max-width: 600px) {
@@ -107,10 +96,6 @@ a:hover {
   border-radius: 5px;
   background: #c7e3c0;
   color: #809b7a;
-}
-
-fieldset {
-  border: 0;
 }
 
 fieldset {

@@ -1,8 +1,8 @@
 .card {
-    width: 1000px;
+    width: 900px;
     max-width: 95%;
     height: fit-content;
-    margin: 80px auto 0;
+    margin: 60px auto 0;
     padding: 50px;
     background: white;
     box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);

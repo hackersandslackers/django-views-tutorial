@@ -26,6 +26,7 @@ setup(
     keywords='Django Views Tutorial',
     packages=find_packages(),
     install_requires=['Django',
+                      'mysqlclient',
                       'python-dotenv'],
     extras_require={
         'dev': ['check-manifest'],
@@ -34,7 +35,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'run = djangotutoial/__main__',
+            'run = django_views_tutorial/__main__',
         ],
     },
     project_urls={

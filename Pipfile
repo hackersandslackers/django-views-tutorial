@@ -9,7 +9,6 @@ verify_ssl = true
 django = "*"
 python-dotenv = "*"
 mysqlclient = "*"
-django-debug-toolbar= "*"
 django-static-precompiler = "*"
 
 [requires]
