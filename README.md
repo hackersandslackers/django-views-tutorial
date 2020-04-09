@@ -2,6 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-v^3.8-blue.svg?logo=python&longCache=true&logoColor=white&colorB=5e81ac&style=flat-square&colorA=4c566a)
 ![Django](https://img.shields.io/badge/Django-v^3.0.0-blue.svg?logo=Django&longCache=true&logoColor=white&colorB=a3be8c&style=flat-square&colorA=4c566a)
+![mysqlclient](https://img.shields.io/badge/MySQLClient-v1.4.6-blue.svg?logo=mysql&longCache=true&logoColor=white&colorA=4c566a&colorB=bf616a&style=flat-square)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square&colorA=4c566a&colorB=a3be8c)
 [![GitHub Issues](https://img.shields.io/github/issues/hackersandslackers/django-views-tutorial.svg?style=flat-square&colorA=4c566a&colorB=ebcb8b)](https://github.com/hackersandslackers/bigquery-python-tutorial/issues)
 [![GitHub Stars](https://img.shields.io/github/stars/hackersandslackers/django-views-tutorial.svg?style=flat-square&colorB=ebcb8b&colorA=4c566a)](https://github.com/hackersandslackers/bigquery-python-tutorial/stargazers)
@@ -23,12 +24,12 @@ $ pipenv update
 $ python3 manage.py runserver
 ```
 
-Alternatively, try installing via `setup.py`:
+Alternatively, try installing via `requirements.txt` in your choice of virtual environment:
 
 ```shell
 $ git clone https://github.com/hackersandslackers/django-views-tutorial.git
 $ cd django-views-tutorial
-$ python3 setup.py install
+$ pip3 install -r requirements.txt
 $ python3 manage.py runserver
 ```
 
