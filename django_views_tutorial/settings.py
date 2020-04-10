@@ -1,9 +1,4 @@
 import os
-import sys
-from dotenv import load_dotenv
-
-basedir = os.path.dirname(sys.modules['__main__'].__file__)
-load_dotenv(os.path.join(basedir, '.env'))
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

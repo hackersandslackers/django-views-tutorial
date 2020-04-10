@@ -11,7 +11,7 @@ class User(models.Model):
     created_at = models.DateTimeField(default=datetime.now())
 
 
-class GuestMessage(models.Model):
+class Message(models.Model):
     """Data model representing messages left by users in a guest book."""
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)

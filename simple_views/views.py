@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.decorators.http import require_http_methods
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import User, GuestMessage
+from .models import User, Message
 from .forms import GuestBookForm, ViewUserProfile
 
 
@@ -20,7 +20,8 @@ def form_view(request):
     if request.method == 'POST':
         form = GuestBookForm(request.POST)
         if form.is_valid():
-            GuestMessage.objects.create(name=form.cleaned_data.get('name'), message=form.cleaned_data.get('message'))
+            Message.objects.create(name=form.cleaned_data.get('name'),
+                                   message=form.cleaned_data.get('message'))
             messages.success(request, 'Success!')
             return HttpResponseRedirect('form')
     else:
@@ -28,13 +29,13 @@ def form_view(request):
     context = {'title': 'Form View',
                'form': form,
                'path': request.get_full_path(),
-               'entries': GuestMessage.objects.all()}
+               'entries': Message.objects.all()}
     return render(request, 'simpleviews/form.html', context)
 
 
 @require_http_methods(["GET", "POST"])
 def users(request):
-    users = User.objects.all()
+    all_users = User.objects.all()
     if request.method == 'POST':
         form = ViewUserProfile(request.POST)
         if form.is_valid():
@@ -45,6 +46,6 @@ def users(request):
         form = ViewUserProfile()
     context = {'title': 'Users (Get or 404)',
                'form': form,
-               'users': users,
+               'users': all_users,
                'path': request.get_full_path()}
     return render(request, 'simpleviews/users.html', context)

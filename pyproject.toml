@@ -13,7 +13,7 @@ keywords = ["Django",
             "Django Views",
             "MVC",
             "Frameworks",
-            "Tutorial",]
+            "Tutorial"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -30,7 +30,7 @@ requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
 
 [tool.poetry.scripts]
-run = "django_views_tutorial/__main__"
+run = "django_views_tutorial.wsgi/__main__"
 
 [tool.poetry.urls]
 issues = "https://github.com/hackersandslackers/django-views-tutorial/issues"
