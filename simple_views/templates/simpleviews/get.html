@@ -20,12 +20,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                {% for header in received_headers %}
-                    <tr>
-                        <td class="key-cell"><span>{{ header.0 }}</span></td>
-                        <td class="value-cell"><span>{{ header.1 }}</span></td>
-                    </tr>
-                {% endfor %}
+                    {% for header in received_headers %}
+                        <tr>
+                            <td class="key-cell">
+                                <span>{{ header.0 }}</span>
+                            </td>
+                            <td class="value-cell">
+                                <span>{{ header.1 }}</span>
+                            </td>
+                        </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>
