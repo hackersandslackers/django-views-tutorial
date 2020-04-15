@@ -35,7 +35,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'run = django_views_tutorial/wsgi/__main__',
+            'run = django_views_tutorial:wsgi.application',
         ],
     },
     project_urls={

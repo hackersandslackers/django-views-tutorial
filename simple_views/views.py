@@ -1,22 +1,33 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.decorators.http import require_http_methods
 from django.contrib import messages
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
 from .models import User, Message
 from .forms import GuestBookForm, ViewUserProfile
 
 
 @require_http_methods(["GET"])
-def get_template(request):
-    context = {'title': 'Basic GET View',
+def get_json_view(request):
+    """Return request metadata to the user."""
+    data = {'received_headers': dict(request.headers.items()),
+            'client_cookies': request.COOKIES,
+            'path': request.get_full_path()}
+    return JsonResponse(data)
+
+
+@require_http_methods(["GET"])
+def get_template_view(request):
+    """Renders a page template."""
+    context = {'title': 'GET Page Template View',
                'received_headers': request.headers.items(),
                'client_cookies': request.COOKIES,
-               'path': request.get_full_path()}
+               'path': request.path}
     return render(request, 'simpleviews/get.html', context)
 
 
 @require_http_methods(["GET", "POST"])
-def form_view(request):
+def form_template_view(request):
+    """Handle form submission in a function-based view."""
     if request.method == 'POST':
         form = GuestBookForm(request.POST)
         if form.is_valid():
@@ -34,7 +45,8 @@ def form_view(request):
 
 
 @require_http_methods(["GET", "POST"])
-def users(request):
+def user_profiles_view(request):
+    """Serve items from database & demonstrate get_or_404()."""
     all_users = User.objects.all()
     if request.method == 'POST':
         form = ViewUserProfile(request.POST)
