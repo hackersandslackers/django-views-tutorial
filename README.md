@@ -17,7 +17,7 @@ Pocket reference for creating Django views (part 2 of a series). This repository
 Installation is recommended with [Pipenv](https://pipenv-fork.readthedocs.io/en/latest/):
 
 ```shell
-$ git clone https://github.com/hackersandslackers/dGuestbookFormjango-views-tutorial.git
+$ git clone https://github.com/hackersandslackers/django-views-tutorial.git
 $ cd django-views-tutorial
 $ pipenv shell
 $ pipenv update
