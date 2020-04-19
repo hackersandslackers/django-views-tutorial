@@ -5,7 +5,7 @@ class GuestBookForm(forms.Form):
     name = forms.CharField(required=True,
                            label="Your name",
                            strip=True)
-    message = forms.CharField(widget=forms.Textarea(attrs={'cols': '30', 'rows': '10'}),
+    message = forms.CharField(widget=forms.Textarea(attrs={'cols': '30', 'rows': '5'}),
                               required=True,
                               label="Leave a message!")
 

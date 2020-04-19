@@ -52,7 +52,7 @@ DATABASES = {
         'NAME': os.environ.get('DB_NAME'),
         'USER': os.environ.get('DB_USER'),
         'PASSWORD': os.environ.get('DB_PASSWORD'),
-        'HOST': 'hackers-data-do-user-1142484-0.db.ondigitalocean.com',
+        'HOST': os.environ.get('DB_HOST'),
         'PORT': os.environ.get('DB_PORT'),
         'OPTIONS': {'ssl': {'pem': '/creds/ca-certificate.crt'}}
     }

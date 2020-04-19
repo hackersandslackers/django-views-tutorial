@@ -9,9 +9,9 @@ from .forms import GuestBookForm, ViewUserProfile
 @require_http_methods(["GET"])
 def get_json_view(request):
     """Return request metadata to the user."""
-    data = {'received_headers': dict(request.headers.items()),
-            'client_cookies': request.COOKIES,
-            'path': request.get_full_path()}
+    data = {'path': request.path,
+            'received_headers': dict(request.headers.items()),
+            'client_cookies': request.COOKIES}
     return JsonResponse(data)
 
 
@@ -19,9 +19,9 @@ def get_json_view(request):
 def get_template_view(request):
     """Renders a page template."""
     context = {'title': 'GET Page Template View',
+               'path': request.path,
                'received_headers': request.headers.items(),
-               'client_cookies': request.COOKIES,
-               'path': request.path}
+               'client_cookies': request.COOKIES}
     return render(request, 'simpleviews/get.html', context)
 
 
