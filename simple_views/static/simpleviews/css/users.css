@@ -1,5 +1,5 @@
 .users-container {
-    width: 1000px;
+    width: 900px;
     max-width: 100%;
     height: fit-content;
     margin: 30px auto 0;
@@ -49,7 +49,7 @@
     background: white;
     padding: 30px 0;
     box-shadow: 0 0 15px rgba(64, 66, 72, 0.3);
-    width: 1000px;
+    width: 900px;
     margin: 30px auto 0;
 }
 

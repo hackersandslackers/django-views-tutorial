@@ -1,10 +1,9 @@
 header {
-    position: relative;
-    width: 100%;
+    max-width: 900px;
     margin: 0 auto;
-    background: white;
+    position: relative;
     padding: 30px 0;
-    box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);
+    border-bottom: 1px solid #bac6d5;
 }
 
 .nav-wrapper {
