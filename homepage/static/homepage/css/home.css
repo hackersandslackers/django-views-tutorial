@@ -1,5 +1,5 @@
 .homepage {
-  text-align: center;
+    text-align: center;
 }
 
 h2 {
@@ -13,6 +13,22 @@ h2 {
     margin-top: 0;
 }
 
+@media (max-width: 800px) {
+    .section-title {
+        font-size: 1.1em !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .apps-container {
+        flex-direction: column;
+    }
+
+    .app {
+        width: 100% !important;
+    }
+}
+
 .part-title {
     text-align: left;
     color: #8d97bc;
@@ -22,22 +38,26 @@ h2 {
 }
 
 .apps-container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-  margin-top: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-top: 50px;
 }
 
 .app {
-  width: 28%;
+    width: 28%;
 }
 
 ul {
-  padding: 0;
-  list-style: none;
-  text-align: left;
+    padding: 0;
+    list-style: none;
+    text-align: left;
 }
 
 li {
-  margin-bottom: 5px;
+    margin-bottom: 7px;
+}
+
+.disabled {
+    font-weight: 400;
 }
