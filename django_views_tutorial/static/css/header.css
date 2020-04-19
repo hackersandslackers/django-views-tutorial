@@ -1,15 +1,24 @@
 header {
   position: relative;
-  width: 1000px;
-  margin: auto;
+    width: 100%;
+    margin: 0 auto;
+    background: white;
+    padding: 40px 0;
+    box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);
+}
+
+.nav-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+        position: relative;
 }
 
 .page-title {
-    margin: 50px auto 0;
+    margin: 0 auto;
 }
 
 .path {
-  margin-bottom: 10px;
+  margin: 0 auto;
   color: #5f6988;
 }
 

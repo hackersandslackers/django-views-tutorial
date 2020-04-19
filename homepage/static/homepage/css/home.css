@@ -13,6 +13,10 @@ h2 {
     margin-top: 0;
 }
 
+.subtitle {
+    font-size: 1em;
+}
+
 @media (max-width: 800px) {
     .section-title {
         font-size: 1.1em !important;
