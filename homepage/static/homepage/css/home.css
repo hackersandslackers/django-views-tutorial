@@ -2,6 +2,15 @@
     text-align: center;
 }
 
+.site-title {
+    color: #5f6988;
+    font-family: proxima-nova, sans-serif;
+    font-size: 2em;
+    margin: 20px 0 3px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
 h2 {
     font-size: 1.3em;
     font-weight: 500;

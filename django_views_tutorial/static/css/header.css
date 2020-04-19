@@ -1,16 +1,16 @@
 header {
-  position: relative;
+    position: relative;
     width: 100%;
     margin: 0 auto;
     background: white;
-    padding: 40px 0;
+    padding: 30px 0;
     box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);
 }
 
 .nav-wrapper {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
-        position: relative;
+    position: relative;
 }
 
 .page-title {
@@ -18,8 +18,8 @@ header {
 }
 
 .path {
-  margin: 0 auto;
-  color: #5f6988;
+    margin: 3px auto 0;
+    color: #5f6988;
 }
 
 .back-button {

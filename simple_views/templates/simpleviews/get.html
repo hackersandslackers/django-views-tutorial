@@ -9,9 +9,9 @@
       href="{% static 'css/header.css' %}"
     />
     <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'simpleviews/css/get.css' %}"
+       rel="stylesheet"
+       type="text/css"
+       href="{% static 'simpleviews/css/get.css' %}"
     />
 {% endblock %}
 
@@ -19,16 +19,18 @@
 {% block content %}
     <div class="viewport">
         {% include 'partials/header.html' %}
-        <div class="get-container">
+        <div class="container">
+            <div class="table-container">
 
-            <table class="header-table">
-                <thead>
+                <h2>Request Headers</h2>
+                <table class="header-table">
+                    <thead>
                     <tr>
                         <th>Header Key</th>
                         <th>Header Value</th>
                     </tr>
-                </thead>
-                <tbody>
+                    </thead>
+                    <tbody>
                     {% for header in received_headers %}
                         <tr>
                             <td class="key-cell">
@@ -39,9 +41,25 @@
                             </td>
                         </tr>
                     {% endfor %}
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
 
+            <div class="table-container">
+                <h2>Request Cookies</h2>
+                <table class="header-table">
+                    {% for cookie in client_cookies %}
+                        <tr>
+                            <td class="key-cell">
+                                <span>{{ cookie.0 }}</span>
+                            </td>
+                            <td class="value-cell">
+                                <span>{{ cookie.1 }}</span>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
         </div>
     </div>
 {% endblock %}

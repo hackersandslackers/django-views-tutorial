@@ -21,7 +21,7 @@ def get_template_view(request):
     context = {'title': 'GET Page Template View',
                'path': request.path,
                'received_headers': request.headers.items(),
-               'client_cookies': request.COOKIES}
+               'client_cookies': request.COOKIES.items()}
     return render(request, 'simpleviews/get.html', context)
 
 

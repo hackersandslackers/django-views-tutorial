@@ -1,16 +1,30 @@
 
-.get-container {
+.container {
+    width: 900px;
+    margin: 0 auto 80px;
+}
+
+h2 {
+    margin: auto;
+    text-align: left;
+    padding: 15px 0 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #49516a;
+}
+
+.table-container {
     max-width: 100%;
-    overflow: hidden;
     margin: 50px auto 0;
-    width: 1000px;
-    box-shadow: 0 0 15px rgba(64, 66, 72, 0.3);
+    width: 900px;
     height: fit-content;
 }
 
 .header-table {
     background: white;
     width: 100%;
+    box-shadow: 0 0 15px rgba(64, 66, 72, 0.3);
+    color: #353f4a;
 }
 
 .header-table td {
@@ -35,11 +49,16 @@
     width: 90%;
 }
 
+.header-table .value-cell {
+    max-width: 538px;
+}
+
 .header-table th {
-    padding: 20px;
+    padding: 20px 15px;
     text-align: left;
     border-bottom: 1px solid #e6e6e6;
     font-weight: 600;
     text-transform: uppercase;
     min-width: 141px;
+    color: #5e6888;
 }

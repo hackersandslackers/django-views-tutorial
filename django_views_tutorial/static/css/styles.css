@@ -16,11 +16,11 @@ body {
     width: 100%;
 }
 
-h1 {
+.page-title {
     margin: 20px 0 3px;
     color: #5f6988;
     font-family: proxima-nova, sans-serif;
-    font-size: 2em;
+    font-size: 1.7em;
     line-height: 1;
     text-transform: uppercase;
 }

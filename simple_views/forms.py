@@ -1,15 +1,17 @@
 from django import forms
+from django.forms import CharField, Textarea, IntegerField
 
 
 class GuestBookForm(forms.Form):
-    name = forms.CharField(required=True,
-                           label="Your name",
-                           strip=True)
-    message = forms.CharField(widget=forms.Textarea(attrs={'cols': '30', 'rows': '5'}),
-                              required=True,
-                              label="Leave a message!")
+    name = CharField(label="Your name",
+                     required=True,
+                     strip=True)
+    message = CharField(label="Leave a message!",
+                        required=True,
+                        widget=Textarea(attrs={'cols': '30', 'rows': '5'}),
+                        min_length=10)
 
 
 class ViewUserProfile(forms.Form):
-    id = forms.IntegerField(required=True,
-                            label="Enter an ID to test `get_or_404()` logic.")
+    id = IntegerField(required=True,
+                      label="Enter an ID to test `get_or_404()` logic.")
