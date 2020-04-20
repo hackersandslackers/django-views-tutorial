@@ -20,7 +20,7 @@ h2 {
     height: fit-content;
 }
 
-.header-table {
+table {
     background: white;
     width: 100%;
     box-shadow: 0 0 15px rgba(64, 66, 72, 0.3);
@@ -28,7 +28,7 @@ h2 {
     border-radius: 4px;
 }
 
-.header-table td {
+table td {
     text-align: left;
     padding: 8px 15px;
     min-width: 141px;
@@ -37,7 +37,7 @@ h2 {
     overflow: hidden;
 }
 
-.header-table td span {
+table td span {
     white-space: nowrap;
     text-overflow: ellipsis;
     display: block;
@@ -46,15 +46,15 @@ h2 {
     font-size: .9em;
 }
 
-.header-table .value-cell span {
+table .value-cell span {
     width: 90%;
 }
 
-.header-table .value-cell {
+table .value-cell {
     max-width: 538px;
 }
 
-.header-table th {
+table th {
     padding: 20px 15px;
     text-align: left;
     border-bottom: 1px solid #e6e6e6;

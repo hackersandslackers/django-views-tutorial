@@ -11,15 +11,25 @@
     text-transform: uppercase;
 }
 
-h2 {
+.section-title {
     font-size: 1.3em;
     font-weight: 500;
-    border-bottom: 1px solid #d7d7d7;
     color: #5f6988;
-    padding-bottom: 5px;
-    flex-grow: unset;
     text-align: left;
-    margin-top: 0;
+    margin: 0;
+}
+
+.section-title-box {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d7d7d7;
+    margin-bottom: 20px;
+}
+
+.section-title-box.disabled {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 .subtitle {
@@ -68,9 +78,64 @@ ul {
 }
 
 li {
-    margin-bottom: 7px;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .disabled {
     font-weight: 400;
+}
+
+.tooltip-toggle {
+    cursor: pointer;
+    position: relative;
+}
+
+svg {
+    height: 18px;
+    width: 18px;
+}
+
+.tooltip-toggle::before {
+    position: absolute;
+    top: -80px;
+    left: -80px;
+    background-color: #2B222A;
+    border-radius: 5px;
+    color: #fff;
+    content: attr(aria-label);
+    padding: 1rem;
+    text-transform: none;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    width: 160px;
+}
+
+.tooltip-toggle::after {
+    position: absolute;
+    top: -12px;
+    left: 9px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #2B222A;
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+    margin-left: -5px;
+    width: 0;
+}
+
+.tooltip-toggle::before, .tooltip-toggle::after {
+    color: #efefef;
+    font-family: monospace;
+    font-size: 16px;
+    opacity: 0;
+    pointer-events: none;
+    text-align: center;
+}
+
+.tooltip-toggle:focus::before, .tooltip-toggle:focus::after, .tooltip-toggle:hover::before, .tooltip-toggle:hover::after {
+    opacity: 1;
+    -webkit-transition: all 0.75s ease;
+    transition: all 0.75s ease;
 }
