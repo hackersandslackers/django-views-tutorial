@@ -3,72 +3,64 @@
 
 
 {% block extra_css %}
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'css/header.css' %}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'simpleviews/css/get.css' %}"
-    />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'simpleviews/css/get.css' %}" />
 {% endblock %}
 
 
 {% block content %}
-    <div class="viewport">
-        {% include 'partials/header.html' %}
-        <div class="container">
+<div class="viewport">
+  {% include 'partials/header.html' %}
+  <div class="container">
 
-            <!-- Headers received from client. -->
-            <div class="table-container headers">
-                <h2>Request Headers</h2>
-                <table class="header-table">
-                    <thead>
-                    <tr>
-                        <th>Header Key</th>
-                        <th>Header Value</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {% for header in received_headers %}
-                        <tr>
-                            <td class="key-cell">
-                                <span>{{ header.0 }}</span>
-                            </td>
-                            <td class="value-cell">
-                                <span>{{ header.1 }}</span>
-                            </td>
-                        </tr>
-                    {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Cookies received from client. -->
-            <div class="table-container cookies">
-                <h2>Request Cookies</h2>
-                <table class="cookie-table">
-                    <thead>
-                    <tr>
-                        <th>Cookie Property</th>
-                        <th>Value</th>
-                    </tr>
-                    </thead>
-                    {% for cookie in client_cookies %}
-                        <tr>
-                            <td class="key-cell">
-                                <span>{{ cookie.0 }}</span>
-                            </td>
-                            <td class="value-cell">
-                                <span>{{ cookie.1 }}</span>
-                            </td>
-                        </tr>
-                    {% endfor %}
-                </table>
-            </div>
-
-        </div>
+    <!-- Headers received from client. -->
+    <div class="table-container headers">
+      <h2>Request Headers</h2>
+      <table class="header-table">
+        <thead>
+          <tr>
+            <th>Header Key</th>
+            <th>Header Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for header in received_headers %}
+          <tr>
+            <td class="key-cell">
+              <span>{{ header.0 }}</span>
+            </td>
+            <td class="value-cell">
+              <span>{{ header.1 }}</span>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
+
+    <!-- Cookies received from client. -->
+    <div class="table-container cookies">
+      <h2>Request Cookies</h2>
+      <table class="cookie-table">
+        <thead>
+          <tr>
+            <th>Cookie Property</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        {% for cookie in client_cookies %}
+        <tr>
+          <td class="key-cell">
+            <span>{{ cookie.0 }}</span>
+          </td>
+          <td class="value-cell">
+            <span>{{ cookie.1 }}</span>
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+
+  </div>
+</div>
 {% endblock %}

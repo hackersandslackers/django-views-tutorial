@@ -3,20 +3,18 @@
 
 
 {% block extra_css %}
-    <link rel="stylesheet" type="text/css" href="{% static 'homepage/css/home.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'homepage/css/home.css' %}">
 {% endblock %}
 
 {% block content %}
-
-    <div class="card">
-        <img src="{% static 'img/logo.png' %}" alt="logo" class="logo" />
-        <h1 class="site-title">{{ title }}</h1>
-        <p class="subtitle">{{ description }}</p>
-        <div class="apps-container">
-            {% include 'homepage/partials/function_module.html' %}
-            {% include 'homepage/partials/class_module.html' %}
-            {% include 'homepage/partials/models_module.html' %}
-        </div>
+  <div class="card">
+    <img src="{% static 'img/logo.png' %}" alt="logo" class="logo" />
+    <h1 class="site-title">{{ title }}</h1>
+    <p class="subtitle">{{ description }}</p>
+    <div class="apps-container">
+      {% include 'homepage/partials/function_module.html' %}
+      {% include 'homepage/partials/class_module.html' %}
+      {% include 'homepage/partials/models_module.html' %}
     </div>
-
-{%  endblock %}
+  </div>
+{% endblock %}

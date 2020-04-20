@@ -1,141 +1,140 @@
 .homepage {
-    text-align: center;
+  text-align: center;
 }
 
 .site-title {
-    color: #5f6988;
-    font-family: proxima-nova, sans-serif;
-    font-size: 2em;
-    margin: 20px 0 3px;
-    line-height: 1;
-    text-transform: uppercase;
+  margin: 20px 0 3px;
+  color: #5f6988;
+  font-family: proxima-nova, sans-serif;
+  font-size: 2em;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .section-title {
-    font-size: 1.3em;
-    font-weight: 500;
-    color: #5f6988;
-    text-align: left;
-    margin: 0;
+  margin: 0;
+  color: #5f6988;
+  font-size: 1.3em;
+  font-weight: 500;
+  text-align: left;
 }
 
 .section-title-box {
-    padding-bottom: 10px;
-    border-bottom: 1px solid #d7d7d7;
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d7d7d7;
 }
 
 .section-title-box.disabled {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .subtitle {
-    font-size: 1em;
+  font-size: 1em;
 }
 
 @media (max-width: 800px) {
-    .section-title {
-        font-size: 1.1em !important;
-    }
+  .section-title {
+    font-size: 1.1em !important;
+  }
 }
 
 @media (max-width: 600px) {
-    .apps-container {
-        flex-direction: column;
-    }
+  .apps-container {
+    flex-direction: column;
+  }
 
-    .app {
-        width: 100% !important;
-    }
+  .app {
+    width: 100% !important;
+  }
 }
 
 .part-title {
-    text-align: left;
-    color: #8d97bc;
-    display: block;
-    font-weight: 600;
-    font-size: .9em;
+  display: block;
+  color: #8d97bc;
+  font-size: .9em;
+  font-weight: 600;
+  text-align: left;
 }
 
 .apps-container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
-    margin-top: 50px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-top: 50px;
 }
 
 .app {
-    width: 28%;
+  width: 28%;
 }
 
 ul {
-    padding: 0;
-    list-style: none;
-    text-align: left;
+  padding: 0;
+  list-style: none;
+  text-align: left;
 }
 
 li {
-    margin-bottom: 10px;
-    font-weight: 600;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .disabled {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .tooltip-toggle {
-    cursor: pointer;
-    position: relative;
+  position: relative;
+  cursor: pointer;
 }
 
 svg {
-    height: 18px;
-    width: 18px;
+  width: 18px;
+  height: 18px;
 }
 
 .tooltip-toggle::before {
-    position: absolute;
-    top: -80px;
-    left: -80px;
-    background-color: #2B222A;
-    border-radius: 5px;
-    color: #fff;
-    content: attr(aria-label);
-    padding: 1rem;
-    text-transform: none;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    width: 160px;
+  -webkit-transition: all 0.5s ease;
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  width: 160px;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: #2B222A;
+  color: #fff;
+  text-transform: none;
+  content: attr(aria-label);
+  transition: all 0.5s ease;
 }
 
 .tooltip-toggle::after {
-    position: absolute;
-    top: -12px;
-    left: 9px;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid #2B222A;
-    content: " ";
-    font-size: 0;
-    line-height: 0;
-    margin-left: -5px;
-    width: 0;
+  position: absolute;
+  top: -12px;
+  left: 9px;
+  width: 0;
+  margin-left: -5px;
+  border-top: 5px solid #2B222A;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  font-size: 0;
+  line-height: 0;
+  content: " ";
 }
 
 .tooltip-toggle::before, .tooltip-toggle::after {
-    color: #efefef;
-    font-family: monospace;
-    font-size: 16px;
-    opacity: 0;
-    pointer-events: none;
-    text-align: center;
+  color: #efefef;
+  font-family: monospace;
+  font-size: 16px;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .tooltip-toggle:focus::before, .tooltip-toggle:focus::after, .tooltip-toggle:hover::before, .tooltip-toggle:hover::after {
-    opacity: 1;
-    -webkit-transition: all 0.75s ease;
-    transition: all 0.75s ease;
+  -webkit-transition: all 0.75s ease;
+  opacity: 1;
+  transition: all 0.75s ease;
 }

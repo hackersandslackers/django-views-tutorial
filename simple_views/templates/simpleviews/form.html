@@ -2,51 +2,51 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" type="text/css" href="{% static '/css/header.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'simpleviews/css/form.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static '/css/header.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'simpleviews/css/form.css' %}">
 {% endblock %}
 
 {% block content %}
-    <div class="viewport">
-        {% include 'partials/header.html' %}
-        <div class="form-container">
+<div class="viewport">
+  {% include 'partials/header.html' %}
+  <div class="form-container">
 
-            <div class="guest-form">
-                <h2>Leave your message:</h2>
-                <div class="form-wrapper">
-                    <form action="{% url 'simple_views:form' %}" method="post">
-                        {% csrf_token %}
-                        {% include 'partials/messages.html' %}
-                        {% for field in form %}
-                            <fieldset>
-                                {{ field.errors }}
-                                {{ field.label_tag }} {{ field }}
-                                {% if field.help_text %}
-                                    <p class="help">{{ field.help_text|safe }}</p>
-                                {% endif %}
-                            </fieldset>
-                        {% endfor %}
-                        <input type="submit" value="Submit">
-                    </form>
-                </div>
-            </div>
-
-            <div class="guestbook">
-                <h2>My Guestbook</h2>
-                {% for entry in entries %}
-                    <div class="entry">
-                      <i class="fas fa-comment"></i>
-                      <div>
-                        <div class="entry-message">{{ entry.message }}</div>
-                            <div>
-                              <span class="entry-name">- {{ entry.name }}</span>
-                              <span class="entry-date">{{ entry.created_at }}</span>
-                            </div>
-                        </div>
-                      </div>
-                {% endfor %}
-            </div>
-
-        </div>
+    <div class="guest-form">
+      <h2>Leave your message:</h2>
+      <div class="form-wrapper">
+        <form action="{% url 'simple_views:form' %}" method="post">
+          {% csrf_token %}
+          {% include 'partials/messages.html' %}
+          {% for field in form %}
+          <fieldset>
+            {{ field.errors }}
+            {{ field.label_tag }} {{ field }}
+            {% if field.help_text %}
+            <p class="help">{{ field.help_text|safe }}</p>
+            {% endif %}
+          </fieldset>
+          {% endfor %}
+          <input type="submit" value="Submit">
+        </form>
+      </div>
     </div>
+
+    <div class="guestbook">
+      <h2>My Guestbook</h2>
+      {% for entry in entries %}
+      <div class="entry">
+        <i class="fas fa-comment"></i>
+        <div>
+          <div class="entry-message">{{ entry.message }}</div>
+          <div>
+            <span class="entry-name">- {{ entry.name }}</span>
+            <span class="entry-date">{{ entry.created_at }}</span>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
 {% endblock %}
