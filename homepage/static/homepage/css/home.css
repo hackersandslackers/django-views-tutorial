@@ -96,18 +96,17 @@ svg {
 }
 
 .tooltip-toggle::before {
-  -webkit-transition: all 0.5s ease;
   position: absolute;
-  top: -80px;
-  left: -80px;
-  width: 160px;
-  padding: 1rem;
-  border-radius: 5px;
-  background-color: #2B222A;
-  color: #fff;
-  text-transform: none;
-  content: attr(aria-label);
-  transition: all 0.5s ease;
+    top: -51px;
+    left: -91px;
+    width: 180px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #2B222A;
+    color: #fff;
+    text-transform: none;
+    content: attr(aria-label);
+    transition: all 0.5s ease;
 }
 
 .tooltip-toggle::after {

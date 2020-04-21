@@ -32,32 +32,42 @@ def form_template_view(request):
         form = GuestBookForm(request.POST)
         if form.is_valid():
             Message.objects.create(name=form.cleaned_data.get('name'),
-                                   message=form.cleaned_data.get('message'))
+                                   message=form.cleaned_data.get('msg'))
             messages.success(request, 'Success!')
             return HttpResponseRedirect('form')
     else:
         form = GuestBookForm()
     context = {'title': 'Form View',
                'form': form,
-               'path': request.get_full_path(),
+               'path': request.path,
                'entries': Message.objects.all()}
     return render(request, 'simpleviews/form.html', context)
 
 
 @require_http_methods(["GET", "POST"])
 def user_profiles_view(request):
-    """Serve items from database & demonstrate get_or_404()."""
+    """Serve objects & demonstrate get_object_or_404()."""
     all_users = User.objects.all()
     if request.method == 'POST':
         form = ViewUserProfile(request.POST)
         if form.is_valid():
-            get_object_or_404(User, id=form.cleaned_data.get('id'))
-            messages.success(request, 'You picked a valid user ID! Now try an invalid one.')
-            return HttpResponseRedirect('users')
+            user_id = form.cleaned_data.get('id')
+            user = get_object_or_404(User, id=user_id)
+            return HttpResponseRedirect(f'{user.id}/')
     else:
         form = ViewUserProfile()
     context = {'title': 'Users (Get or 404)',
                'form': form,
                'users': all_users,
-               'path': request.get_full_path()}
+               'path': request.path}
     return render(request, 'simpleviews/users.html', context)
+
+
+@require_http_methods(["GET"])
+def user_profile(request, user_id):
+    # username = request.GET.get('username')
+    user = User.objects.get(id=user_id)
+    context = {'user': user,
+               'title': f'{user.name}\'s Profile',
+               'path': request.path}
+    return render(request, 'simpleviews/profile.html', context)

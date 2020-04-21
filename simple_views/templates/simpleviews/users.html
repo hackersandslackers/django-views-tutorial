@@ -3,53 +3,51 @@
 
 
 {% block extra_css %}
-  <link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}">
-  <link rel="stylesheet" type="text/css" href="{% static 'simpleviews/css/users.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'simpleviews/css/users.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'simpleviews/css/get.css' %}">
 {% endblock %}
 
 
 {% block content %}
-<div class="viewport">
-  {% include 'partials/header.html' %}
+    <div class="viewport">
+        {% include 'partials/header.html' %}
 
-  <div class="users-container">
-    <table class="users-table">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Website</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for user in users %}
-        <tr>
-          <td class="user-id"><span>{{ user.id }}</span></td>
-          <td class="user-name"><span>{{ user.name }}</span></td>
-          <td class="user-email"><span>{{ user.email }}</span></td>
-          <td class="user-website"><span>{{ user.website }}</span></td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  </div>
+        <div class="users-container">
+            <table class="users-table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Website</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for user in users %}
+                    <tr>
+                        <td class="user-id"><span>{{ user.id }}</span></td>
+                        <td class="user-name"><span>{{ user.name }}</span></td>
+                        <td class="user-email"><span>{{ user.email }}</span></td>
+                        <td class="user-website"><span>{{ user.website }}</span></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
 
-  <div class="user-form">
-    <form action="{% url 'simple_views:users' %}" method="post" class="">
-      {% csrf_token %}
-      {% include 'partials/messages.html' %}
-      {% for field in form %}
-      <fieldset>
-        {{ field.errors }}
-        {{ field.label_tag }} {{ field }}
-        {% if field.help_text %}
-        <p class="help">{{ field.help_text|safe }}</p>
-        {% endif %}
-      </fieldset>
-      {% endfor %}
-      <input type="submit" value="View Profile">
-    </form>
-  </div>
-</div>
+        <div class="user-form">
+            {% include 'partials/messages.html' %}
+            <h3 class="fetch-user-title">Test `get_or_404()` logic.</h3>
+            <form action="{% url 'simple_views:users' %}" method="post" class="">
+                {% csrf_token %}
+                {{ form.id.label_tag }}
+                <div class="get-user-fieldset">
+                    {{ form.id }}
+                    <input type="submit" value="Go">
+                </div>
+                {{ form.id.errors }}
+            </form>
+        </div>
+    </div>
 {% endblock %}

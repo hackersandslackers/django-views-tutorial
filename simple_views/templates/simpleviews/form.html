@@ -34,16 +34,16 @@
     <div class="guestbook">
       <h2>My Guestbook</h2>
       {% for entry in entries %}
-      <div class="entry">
-        <i class="fas fa-comment"></i>
-        <div>
-          <div class="entry-message">{{ entry.message }}</div>
-          <div>
-            <span class="entry-name">- {{ entry.name }}</span>
-            <span class="entry-date">{{ entry.created_at }}</span>
+          <div class="entry">
+            <i class="fas fa-comment"></i>
+            <div>
+              <div class="entry-message">{{ entry.message }}</div>
+              <div class="message-footer">
+                <span class="entry-name">- {{ entry.name }}</span>
+                <span class="entry-date">{{ entry.created_at }}</span>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
       {% endfor %}
     </div>
 

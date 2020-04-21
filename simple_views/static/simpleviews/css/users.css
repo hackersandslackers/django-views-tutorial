@@ -1,132 +1,123 @@
 .users-container {
-  width: 900px;
-  max-width: 100%;
-  height: fit-content;
-  margin: 30px auto 0;
-  overflow: hidden;
-  box-shadow: 0 0 15px rgba(64, 66, 72, 0.3);
+    width: 900px;
+    max-width: 100%;
+    height: fit-content;
+    margin: 30px auto 0;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(64, 66, 72, 0.3);
 }
 
-.users-table {
-  width: 100%;
-  background: white;
-}
-
-.users-table td {
-  min-width: 141px;
-  padding: 8px 15px;
-  overflow: hidden;
-  text-align: left;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.users-table td span {
-  display: block;
-  max-width: 840px;
-  overflow: hidden;
-  font-size: .9em;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.users-table .value-cell span {
-  width: 90%;
-}
-
-.users-table th {
-  min-width: 141px;
-  padding: 20px;
-  border-bottom: 1px solid #e6e6e6;
-  font-weight: 600;
-  text-align: left;
-  text-transform: uppercase;
+tr td:first-of-type,
+tr th:first-of-type {
+    min-width: unset;
+    max-width: 60px;
 }
 
 .user-form {
-  width: 900px;
-  margin: 30px auto 0;
-  padding: 30px 0;
-  border: 0;
-  background: white;
-  box-shadow: 0 0 15px rgba(64, 66, 72, 0.3);
+    width: 900px;
+    margin: 30px auto 0;
+    padding: 0 0 30px;
+    border: 0;
+    background: white;
+    box-shadow: 0 0 15px rgba(64, 66, 72, 0.3);
 }
 
 fieldset {
-  margin: 0;
-  border: 0;
+    margin: 0;
+    border: 0;
 }
 
 label {
-  width: 100%;
-  text-align: center;
+    width: 100%;
+    text-align: center;
 }
 
 input[type="number"] {
-  -webkit-appearance: none;
-  width: -webkit-fill-available;
-  width: 70px;
-  margin: 15px auto;
-  padding: 5px;
-  border: 1px solid #e8ebed;
-  border-radius: 3px;
-  outline: none;
-  background: #ebeff3;
-  font-size: 1.5em;
-  text-align: center;
-  transition: all .2s ease-out;
+    -webkit-appearance: none;
+    width: 70px;
+    margin: 0;
+    padding: 4px;
+    height: 30px;
+    border: 1px solid #d6dbde;
+    border-right: 0;
+    color: grey;
+    border-radius: 3px 0 0 3px;
+    outline: none;
+    background: #ebeff3;
+    font-size: 1.5em;
+    text-align: center;
+    transition: all .2s ease-out;
 }
 
 input[type="number"]:hover {
-  border-color: #6baaf2 !important;
-  background: #dde9f5 !important;
-  cursor: text !important;
+    border-color: #6baaf2 !important;
+    background: #dde9f5 !important;
+    cursor: text !important;
 }
 
 input[type="number"]:hover::placeholder {
-  color: #8ba6c7 !important;
+    color: #8ba6c7 !important;
 }
 
 input[type="number"]:focus {
-  border-color: #6baaf2 !important;
-  background: white !important;
+    border-color: #6baaf2 !important;
+    background: white !important;
 }
 
 input[type="submit"] {
-  -webkit-appearance: none;
-  width: 250px;
-  padding: 10px;
-  border: 1px solid #5db9d7;
-  border-radius: 3px;
-  background: white;
-  color: #5db9d7;
-  font-size: .9em;
-  text-transform: uppercase;
-  transition: all .2s ease;
+    -webkit-appearance: none;
+    width: 60px;
+    height: 40px;
+    border: 1px solid #5db9d7;
+    border-radius: 0 3px 3px 0;
+    background: white;
+    color: #5db9d7;
+    font-size: .9em;
+    margin: 0;
+    text-transform: uppercase;
+    transition: all .2s ease;
 }
 
 input[type="submit"]:hover {
-  background: #5db9d7;
-  color: white;
-  cursor: pointer;
+    background: #5db9d7;
+    color: white;
+    cursor: pointer;
 }
 
 .messages {
-  position: relative;
+    position: relative;
+}
+
+ul {
+    margin: 0;
+    padding: 0 !important;
 }
 
 .messages .success {
-  position: absolute;
-  top: -69px;
-  right: 0;
-  left: 0;
-  width: 358px;
-  margin: auto;
-  padding: 12px 15px;
-  border-radius: 4px;
-  background: #c7e3c0;
-  color: #70896a;
-  font-size: 1em;
-  font-weight: 500;
-  list-style: none;
+    width: 100%;
+    margin: auto;
+    padding: 15px 0;
+    border-radius: 0;
+    background: #c7e3c0;
+    color: #70896a;
+    font-size: 1em;
+    font-weight: 500;
+    list-style: none;
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+}
+
+.get-user-fieldset {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.fetch-user-title {
+    padding-top: 25px;
+    margin: 0 0 15px;
+    font-weight: 500;
+    color: #5e6888;
 }

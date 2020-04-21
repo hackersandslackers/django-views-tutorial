@@ -1,4 +1,12 @@
 import os
+import environ
+
+root = environ.Path(__file__) - 3  # get root of the project
+env = environ.Env()
+environ.Env.read_env()  # reading .env file
+
+# False if not in os.environ
+DEBUG = env('DEBUG')
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -8,7 +16,6 @@ PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # Basic config
-DEBUG = True
 ALLOWED_HOSTS = ['0.0.0.0',
                  '127.0.0.1',
                  'localhost',

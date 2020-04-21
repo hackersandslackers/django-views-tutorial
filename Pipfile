@@ -9,7 +9,7 @@ verify_ssl = true
 django = "*"
 python-dotenv = "*"
 mysqlclient = "*"
-django-static-precompiler = "*"
+django-environ = "*"
 
 [requires]
 python_version = "3.8"

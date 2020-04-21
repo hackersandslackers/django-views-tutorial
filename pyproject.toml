@@ -20,6 +20,7 @@ python = "^3.8"
 django = "*"
 python-dotenv = "*"
 mysqlclient = "*"
+django-environ = "*"
 
 [tool.poetry.dev-dependencies]
 pytest = "*"

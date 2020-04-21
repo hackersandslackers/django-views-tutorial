@@ -1,5 +1,4 @@
 from django.db import models
-from datetime import datetime
 
 
 class User(models.Model):
@@ -7,8 +6,12 @@ class User(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50)
     email = models.EmailField(null=False)
+    title = models.CharField(max_length=250, null=True)
+    bio = models.TextField(null=True)
+    location = models.CharField(max_length=250, null=True)
+    avatar = models.CharField(max_length=250, null=True)
     website = models.URLField()
-    created_at = models.DateTimeField(default=datetime.now())
+    created_at = models.DateTimeField()
 
 
 class Message(models.Model):
@@ -16,4 +19,4 @@ class Message(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
     message = models.TextField()
-    created_at = models.DateTimeField(default=datetime.now())
+    created_at = models.DateTimeField()
