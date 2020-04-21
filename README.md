@@ -4,9 +4,9 @@
 ![Django](https://img.shields.io/badge/Django-v^3.0.0-blue.svg?logo=Django&longCache=true&logoColor=white&colorB=a3be8c&style=flat-square&colorA=4c566a)
 ![MySQLClient](https://img.shields.io/badge/MySQLClient-v1.4.6-blue.svg?logo=mysql&longCache=true&logoColor=white&colorA=4c566a&colorB=bf616a&style=flat-square)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square&colorA=4c566a&colorB=a3be8c)
-[![GitHub Issues](https://img.shields.io/github/issues/hackersandslackers/django-views-tutorial.svg?style=flat-square&colorA=4c566a&colorB=ebcb8b)](https://github.com/hackersandslackers/bigquery-python-tutorial/issues)
-[![GitHub Stars](https://img.shields.io/github/stars/hackersandslackers/django-views-tutorial.svg?style=flat-square&colorB=ebcb8b&colorA=4c566a)](https://github.com/hackersandslackers/bigquery-python-tutorial/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/hackersandslackers/django-views-tutorial.svg?style=flat-square&colorA=4c566a&colorB=ebcb8b)](https://github.com/hackersandslackers/bigquery-python-tutorial/network)
+[![GitHub Issues](https://img.shields.io/github/issues/hackersandslackers/django-views-tutorial.svg?style=flat-square&colorA=4c566a&colorB=ebcb8b)](https://github.com/hackersandslackers/django-views-tutorial/issues)
+[![GitHub Stars](https://img.shields.io/github/stars/hackersandslackers/django-views-tutorial.svg?style=flat-square&colorB=ebcb8b&colorA=4c566a)](https://github.com/hackersandslackers/django-views-tutorial/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/hackersandslackers/django-views-tutorial.svg?style=flat-square&colorA=4c566a&colorB=ebcb8b)](https://github.com/hackersandslackers/django-views-tutorial/network)
 
 ![Django Intro Tutorial](https://github.com/hackersandslackers/django-views-tutorial/blob/master/.github/django-views-1@2x.jpg?raw=true)
 

@@ -48,7 +48,7 @@ a:hover {
 }
 
 .card {
-    width: 1000px;
+    width: 900px;
     max-width: 93%;
     height: fit-content;
     margin: 80px auto 0;
@@ -60,6 +60,7 @@ a:hover {
 @media (max-width: 800px) {
     .card {
         padding: 40px 0;
+        width: unset;
     }
 
     .apps-container {
@@ -183,4 +184,10 @@ label {
     cursor: not-allowed;
     color: #88959b;
     opacity: 0.8;
+}
+
+.tooltip-toggle,
+button,
+input[type='submit'] {
+    outline: none;
 }

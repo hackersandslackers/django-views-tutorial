@@ -70,8 +70,8 @@ input[type="submit"] {
     height: 40px;
     border: 1px solid #5db9d7;
     border-radius: 0 3px 3px 0;
-    background: white;
-    color: #5db9d7;
+    color: white;
+    background: #5db9d7;
     font-size: .9em;
     margin: 0;
     text-transform: uppercase;
@@ -79,8 +79,8 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background: #5db9d7;
-    color: white;
+    background: white;
+    color: #5db9d7;
     cursor: pointer;
 }
 
