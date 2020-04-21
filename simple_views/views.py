@@ -45,7 +45,7 @@ def form_template_view(request):
 
 
 @require_http_methods(["GET", "POST"])
-def user_profiles_view(request):
+def user_profile_list_view(request):
     """Serve objects & demonstrate get_object_or_404()."""
     all_users = User.objects.all()
     if request.method == 'POST':
@@ -64,8 +64,7 @@ def user_profiles_view(request):
 
 
 @require_http_methods(["GET"])
-def user_profile(request, user_id):
-    # username = request.GET.get('username')
+def user_profile_view(request, user_id):
     user = User.objects.get(id=user_id)
     context = {'user': user,
                'title': f'{user.name}\'s Profile',
