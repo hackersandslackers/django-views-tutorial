@@ -75,7 +75,7 @@ DATABASES = {
         'PASSWORD': os.environ.get('DATABASE_PASSWORD'),
         'HOST': os.environ.get('DATABASE_HOST'),
         'PORT': os.environ.get('DATABASE_PORT'),
-        'OPTIONS': {'ssl': {'pem': '../creds/ca-certificate.crt'}}
+        'OPTIONS': {'ssl': {'pem': os.environ.get('DATABASE_CERTIFICATE')}}
     }
 }
 
