@@ -23,7 +23,7 @@ ALLOWED_HOSTS = ['0.0.0.0',
                  'django.hackersandslackers.app']
 
 INTERNAL_IPS = ['127.0.0.1', ]
-WSGI_APPLICATION = 'django_views_tutorial.wsgi:application'
+WSGI_APPLICATION = 'django_views_tutorial.wsgi.application'
 
 # Application definition
 INSTALLED_APPS = [
