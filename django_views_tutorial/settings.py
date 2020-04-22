@@ -19,10 +19,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 ALLOWED_HOSTS = ['0.0.0.0',
                  '127.0.0.1',
                  'localhost',
-                 '127.0.0.1:8000']
+                 '127.0.0.1:8000',
+                 'django.hackersandslackers.app']
 
 INTERNAL_IPS = ['127.0.0.1', ]
-WSGI_APPLICATION = 'django_views_tutorial.wsgi.application'
+WSGI_APPLICATION = 'django_views_tutorial.wsgi:application'
 
 # Application definition
 INSTALLED_APPS = [
@@ -104,16 +105,6 @@ TIME_ZONE = 'EST'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
-
-# Email
-SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
-SENDGRID_TO_EMAIL = os.environ.get('SENDGRID_TO_EMAIL')
-
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
 
 # Etc.
 APPEND_SLASH = True
