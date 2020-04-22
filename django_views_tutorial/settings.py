@@ -99,7 +99,8 @@ TEMPLATES = [
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(PROJECT_ROOT, "static")
+    os.path.join(PROJECT_ROOT, "static"),
+    '/var/www/django-views-tutorial/static/'
 ]
 
 # Internationalization
