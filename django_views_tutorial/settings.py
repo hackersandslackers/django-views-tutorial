@@ -15,6 +15,13 @@ DEBUG = env('DEBUG')
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
+# Static files (CSS, JavaScript, Images)
+STATIC_URL = 'static'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [
+    os.path.join(PROJECT_ROOT, "static"),
+]
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
@@ -96,13 +103,7 @@ TEMPLATES = [
     },
 ]
 
-# Static files (CSS, JavaScript, Images)
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [
-    os.path.join(PROJECT_ROOT, "static"),
-    '/var/www/django-views-tutorial/django_views_tutorial/static/'
-]
+
 
 # Internationalization
 LANGUAGE_CODE = 'en-us'
