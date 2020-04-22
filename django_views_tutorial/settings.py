@@ -16,10 +16,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # Static files (CSS, JavaScript, Images)
-STATIC_URL = 'static'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATICFILES_DIRS = [
     os.path.join(PROJECT_ROOT, "static"),
+    '/var/www/django-views-tutorial/django_views_tutorial/static',
+    '/var/www/django-views-tutorial/homepage/static',
+    '/var/www/django-views-tutorial/simple_views/static',
+    '/var/www/django-views-tutorial/class_views/static',
+    '/var/www/django-views-tutorial/model_views/static',
 ]
 
 # SECURITY WARNING: keep the secret key used in production secret!
