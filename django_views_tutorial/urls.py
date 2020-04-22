@@ -25,4 +25,4 @@ urlpatterns = [
     path("simple_views/", include(("simple_views.urls", 'simple_views'), namespace='simple_views')),
     path("class_views/", include(("class_views.urls", 'class_views'), namespace='class_views')),
     path("model_views/", include(("model_views.urls", 'model_views'), namespace='model_views')),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
