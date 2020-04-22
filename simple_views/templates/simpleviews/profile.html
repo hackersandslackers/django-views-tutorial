@@ -17,9 +17,16 @@
                 <img class="user-avatar" src="{{ user.avatar }}" alt="profile">
                 <div class="account-details">
                     <h2>{{ user.name }}</h2>
-                    <div class="user-title meta"><i class="fas fa-suitcase"></i> {{ user.title }}</div>
-                    <div class="user-location meta"><i class="fas fa-globe-americas"></i> {{ user.location }}</div>
-                    <div class="user-website meta"><i class="fas fa-window-maximize"></i> <a href="{{ user.website }}">{{ user.website }}</a></div>
+                    <div class="user-personal-info">
+                        <div class="user-title meta"><i class="fas fa-suitcase"></i> <span>{{ user.title }}</span></div>
+                        <div class="user-location meta"><i class="fas fa-globe-americas"></i> <span>{{ user.location }}</span></div>
+                    </div>
+                    <div class="user-social-profiles">
+                        <div class="user-twitter meta"><i class="fab fa-twitter"></i> <span>@{{ user.twitter_profile }}</span></div>
+                        <div class="user-instagram meta"><i class="fab fa-instagram"></i> <span>@{{ user.instagram_profile }}</span></div>
+                        <div class="user-website meta"><i class="fas fa-window-maximize"></i> <a href="{{ user.website }}">{{ user.website }}</a></div>
+                    </div>
+
                 </div>
             </div>
             <p class="user-bio">{{ user.bio }}</p>

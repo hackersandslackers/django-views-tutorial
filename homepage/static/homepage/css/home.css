@@ -39,9 +39,20 @@
     .section-title {
         font-size: 1.1em !important;
     }
+
+    .card {
+        margin: 40px auto 0;
+        padding: 40px 20px;
+        width: 90%;
+        max-width: unset;
+    }
 }
 
 @media (max-width: 600px) {
+    .site-title {
+        font-size: 1.7em;
+    }
+
     .apps-container {
         flex-direction: column;
     }
@@ -49,7 +60,17 @@
     .app {
         width: 100% !important;
     }
+
+    .section-title {
+        font-size: 1.4em !important;
+    }
+
+    .card {
+        padding: 40px;
+        margin: 0;
+    }
 }
+
 
 .part-title {
     display: block;
@@ -62,7 +83,7 @@
 .apps-container {
     display: flex;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 50px;
 }
 
@@ -93,6 +114,7 @@ li {
 svg {
     width: 18px;
     height: 18px;
+    fill: rgb(212, 97, 101);
 }
 
 .tooltip-toggle::before {
@@ -136,4 +158,10 @@ svg {
     -webkit-transition: all 0.75s ease;
     opacity: 1;
     transition: all 0.75s ease;
+}
+
+.fas,
+i {
+    font-size: .9em;
+    margin-left: 3px;
 }

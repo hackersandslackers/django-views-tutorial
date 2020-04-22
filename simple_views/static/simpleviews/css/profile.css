@@ -15,22 +15,22 @@
 }
 
 .user-avatar {
-    height: 130px;
+    height: 137px;
     width: auto;
-    margin-right: 20px;
+    margin-right: 25px;
 }
 
 .account-header {
     display: flex;
     justify-content: left;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 h2 {
     color: #4e566b;
-    font-size: 2.3em;
-    font-weight: 500;
-    margin: 0 0 20px;
+    font-size: 2.5em;
+    font-weight: 400;
+    margin: 0 0 5px;
     line-height: 1;
 }
 
@@ -40,22 +40,45 @@ h2 {
 
 .user-bio {
     text-align: left;
-    font-size: 1em;
+    font-size: 1.05em;
     line-height: 1.4;
 }
 
-.meta {
-    font-size: 1.1em;
-    color: #4e566b;
-    margin-bottom: 5px;
- }
-
-.user-website {
-    font-size: .9em;
-    color: #69b4d9;
+.user-social-profiles {
+    display: flex;
+    justify-content: left;
+    margin-top: 20px;
 }
 
-.fas {
+.user-personal-info .meta {
+    font-size: 1.2em;
+    margin-bottom: 3px;
+}
+
+.user-social-profiles .meta {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.meta {
+    color: #5c657d;
+    margin: 0 25px 0 0;
+ }
+
+.user-social-profiles .meta a,
+.user-social-profiles .meta span {
+    color: #5c657d;
+    font-weight: 600;
+}
+
+.user-social-profiles .user-website {
+    font-size: .9em;
+    /*color: #69b4d9;*/
+}
+
+.fas,
+i {
     font-size: .9em;
     margin-right: 5px;
+    opacity: .8;
 }

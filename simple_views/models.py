@@ -9,6 +9,8 @@ class User(models.Model):
     title = models.CharField(max_length=250, null=True)
     bio = models.TextField(null=True)
     location = models.CharField(max_length=250, null=True)
+    twitter_profile = models.URLField(null=True)
+    instagram_profile = models.URLField(null=True)
     avatar = models.CharField(max_length=250, null=True)
     website = models.URLField()
     created_at = models.DateTimeField()

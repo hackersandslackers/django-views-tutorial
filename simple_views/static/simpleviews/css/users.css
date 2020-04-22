@@ -22,6 +22,25 @@ tr th:first-of-type {
     box-shadow: 0 0 15px rgba(64, 66, 72, 0.3);
 }
 
+@media (max-width: 800px) {
+    .user-form {
+        width: unset;
+    }
+}
+
+.user-form p {
+    font-size: 1em;
+    width: 400px;
+    margin: 15px auto;
+    line-height: 1.4;
+}
+
+.user-form code {
+    background: rgba(145, 176, 211, .1);
+    color: #547ea5;
+    padding: 2px;
+}
+
 fieldset {
     margin: 0;
     border: 0;
@@ -30,6 +49,20 @@ fieldset {
 label {
     width: 100%;
     text-align: center;
+}
+
+.users-table td {
+    padding: 15px 15px;
+    line-height: 1;
+    min-width: unset;
+}
+
+.users-table th {
+    min-width: unset;
+}
+
+.user-profile-link {
+    max-width: 60px;
 }
 
 input[type="number"] {
@@ -72,7 +105,7 @@ input[type="submit"] {
     border-radius: 0 3px 3px 0;
     color: white;
     background: #5db9d7;
-    font-size: .9em;
+    font-size: .95em;
     margin: 0;
     text-transform: uppercase;
     transition: all .2s ease;
@@ -117,7 +150,9 @@ ul {
 
 .fetch-user-title {
     padding-top: 25px;
-    margin: 0 0 15px;
+    margin: 0 0 10px;
     font-weight: 500;
     color: #5e6888;
+    text-transform: uppercase;
+    font-size: 1.25em;
 }

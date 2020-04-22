@@ -17,7 +17,7 @@ def get_json_view(request):
 
 @require_http_methods(["GET"])
 def get_template_view(request):
-    """Renders a page template."""
+    """Render a dynamically page template."""
     context = {'title': 'GET Page Template View',
                'path': request.path,
                'received_headers': request.headers.items(),
@@ -27,7 +27,7 @@ def get_template_view(request):
 
 @require_http_methods(["GET", "POST"])
 def form_template_view(request):
-    """Handle form submission in a function-based view."""
+    """Create data records via form submission."""
     if request.method == 'POST':
         form = GuestBookForm(request.POST)
         if form.is_valid():
@@ -56,7 +56,7 @@ def user_profile_list_view(request):
             return HttpResponseRedirect(f'{user.id}/')
     else:
         form = ViewUserProfile()
-    context = {'title': 'Users (Get or 404)',
+    context = {'title': 'User Profile Directory',
                'form': form,
                'users': all_users,
                'path': request.path}
