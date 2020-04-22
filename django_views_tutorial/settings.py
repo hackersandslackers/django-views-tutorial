@@ -21,7 +21,7 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATICFILES_DIRS = [
     os.path.join(PROJECT_ROOT, "static"),
     '/var/www/django-views-tutorial/django_views_tutorial/static',
-    '/var/www/django-views-tutorial/homepage/static',
+    os.path.join(BASE_DIR, "homepage/static"),
     '/var/www/django-views-tutorial/simple_views/static',
     '/var/www/django-views-tutorial/class_views/static',
     '/var/www/django-views-tutorial/model_views/static',
