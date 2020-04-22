@@ -51,8 +51,8 @@ h2 {
 }
 
 .user-personal-info .meta {
-    font-size: 1.2em;
-    margin-bottom: 3px;
+    font-size: 1.1em;
+    margin-bottom: 2px;
 }
 
 .user-social-profiles .meta {
@@ -61,13 +61,13 @@ h2 {
 }
 
 .meta {
-    color: #5c657d;
+    color: #747987;
     margin: 0 25px 0 0;
  }
 
 .user-social-profiles .meta a,
 .user-social-profiles .meta span {
-    color: #5c657d;
+    color: #747987;
     font-weight: 600;
 }
 

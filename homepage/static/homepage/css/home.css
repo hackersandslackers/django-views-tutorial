@@ -32,7 +32,7 @@
 }
 
 .subtitle {
-    font-size: 1em;
+    font-size: 1.08em;
 }
 
 @media (max-width: 800px) {
@@ -164,4 +164,5 @@ svg {
 i {
     font-size: .9em;
     margin-left: 3px;
+    opacity: .5;
 }
