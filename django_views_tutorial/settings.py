@@ -22,8 +22,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "homepage/static"),
     os.path.join(BASE_DIR, "simple_views/static"),
     os.path.join(BASE_DIR, "class_views/static"),
-    os.path.join(BASE_DIR, "model_views/static"),
-
 ]
 
 # SECURITY WARNING: keep the secret key used in production secret!
