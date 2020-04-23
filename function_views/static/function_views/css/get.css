@@ -25,6 +25,7 @@ table {
   background: white;
   box-shadow: 0 0 15px rgba(64, 66, 72, 0.3);
   color: #353f4a;
+  border-spacing: 0;
 }
 
 table td {

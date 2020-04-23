@@ -3,8 +3,8 @@
 
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'simpleviews/css/users.css' %}">
-    <link rel="stylesheet" href="{% static 'simpleviews/css/get.css' %}">
+    <link rel="stylesheet" href="{% static 'function_views/css/users.css' %}">
+    <link rel="stylesheet" href="{% static 'function_views/css/get.css' %}">
 {% endblock %}
 
 
@@ -12,27 +12,13 @@
     <div class="viewport">
         {% include 'partials/header.html' %}
 
-        <div class="user-form">
-            {% include 'partials/messages.html' %}
-            <h3 class="fetch-user-title">User Lookup</h3>
-            <p>Test Django's <code>get_object_or_404()</code> feature by submitting valid & invalid user IDs below.</p>
-            <form action="{% url 'simple_views:users' %}" method="post" class="">
-                {% csrf_token %}
-                <div class="get-user-fieldset">
-                    {{ form.id }}
-                    <input type="submit" value="Go">
-                </div>
-                {{ form.id.errors }}
-            </form>
-        </div>
-
         <div class="users-container">
             <table class="users-table">
                 <thead>
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
-                    <th>Title</th>
+                    <th>Profession</th>
                     <th>Location</th>
                     <th>Twitter</th>
                     <th>Instagram</th>
@@ -43,8 +29,8 @@
                 {% for user in users %}
                     <tr>
                         <td class="user-id"><span>{{ user.id }}</span></td>
-                        <td class="user-name"><span>{{ user.name }}</span></td>
-                        <td class="user-title"><span>{{ user.title }}</span></td>
+                        <td class="user-name"><a href="{{ user.id }}/"><span>{{ user.name }}</span></a></td>
+                        <td class="user-title"><span>{{ user.profession }}</span></td>
                         <td class="user-location"><span>{{ user.location }}</span></td>
                         <td class="user-twitter"><span>@{{ user.twitter_profile }}</span></td>
                         <td class="user-instagram"><span>@{{ user.instagram_profile }}</span></td>

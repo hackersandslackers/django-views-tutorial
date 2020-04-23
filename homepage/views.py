@@ -6,6 +6,6 @@ from django.conf import settings
 def index(request):
     context = {'template': 'homepage',
                'title': 'Django Views Tutorial',
-               'description': mark_safe(settings.GITHUB_REPO)}
+               'description': mark_safe(f'Demo for creating views in Django (View on <a href="{settings.GITHUB_REPO}">Github</a>).')}
     return render(request, 'homepage/index.html', context)
 

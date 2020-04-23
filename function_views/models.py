@@ -6,7 +6,7 @@ class User(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50)
     email = models.EmailField(null=False)
-    title = models.CharField(max_length=250, null=True)
+    profession = models.CharField(max_length=250, null=True)
     bio = models.TextField(null=True)
     location = models.CharField(max_length=250, null=True)
     twitter_profile = models.URLField(null=True)

@@ -8,7 +8,7 @@ license = "MIT"
 readme = "README.md"
 homepage = "django-function-based-views"
 repository = "https://github.com/hackersandslackers/django-views-tutorial/"
-documentation = "https://hackersandslackers.com/django-views-tutorial/"
+documentation = "https://hackersandslackers.com/creating-django-views/"
 keywords = ["Django",
             "Django Views",
             "MVC",

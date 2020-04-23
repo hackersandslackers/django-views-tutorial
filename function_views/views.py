@@ -2,8 +2,9 @@ from django.shortcuts import render, get_object_or_404
 from django.views.decorators.http import require_http_methods
 from django.contrib import messages
 from django.http import HttpResponseRedirect, JsonResponse
+
 from .models import User, Message
-from .forms import GuestBookForm, ViewUserProfile
+from .forms import GuestBookForm
 
 
 @require_http_methods(["GET"])
@@ -22,7 +23,7 @@ def get_template_view(request):
                'path': request.path,
                'received_headers': request.headers.items(),
                'client_cookies': request.COOKIES.items()}
-    return render(request, 'simpleviews/get.html', context)
+    return render(request, 'function_views/get.html', context)
 
 
 @require_http_methods(["GET", "POST"])
@@ -41,32 +42,29 @@ def form_template_view(request):
                'form': form,
                'path': request.path,
                'entries': Message.objects.all()}
-    return render(request, 'simpleviews/form.html', context)
+    return render(request, 'function_views/form.html', context)
 
 
 @require_http_methods(["GET", "POST"])
 def user_profile_list_view(request):
-    """Serve objects & demonstrate get_object_or_404()."""
-    all_users = User.objects.all()
-    if request.method == 'POST':
-        form = ViewUserProfile(request.POST)
-        if form.is_valid():
-            user_id = form.cleaned_data.get('id')
-            user = get_object_or_404(User, id=user_id)
-            return HttpResponseRedirect(f'{user.id}/')
+    """Directory of user profiles."""
+    user_profession = request.GET.get('profession', None)
+    if user_profession:
+        users = User.objects.filter(profession=user_profession)
     else:
-        form = ViewUserProfile()
+        users = User.objects.all()
     context = {'title': 'User Profile Directory',
-               'form': form,
-               'users': all_users,
+               'users': users,
                'path': request.path}
-    return render(request, 'simpleviews/users.html', context)
+    return render(request, 'function_views/users.html', context)
 
 
 @require_http_methods(["GET"])
 def user_profile_view(request, user_id):
-    user = User.objects.get(id=user_id)
+    """User profile page."""
+    user = get_object_or_404(User, id=user_id)
     context = {'user': user,
                'title': f'{user.name}\'s Profile',
                'path': request.path}
-    return render(request, 'simpleviews/profile.html', context)
+    return render(request, 'function_views/profile.html', context)
+

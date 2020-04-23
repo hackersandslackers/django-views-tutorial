@@ -26,10 +26,10 @@ header {
     top: 0;
     bottom: 0;
     left: 0;
-    height: fit-content;
     margin: auto;
     color: #69b4d9;
     font-size: 1em;
     font-weight: bold;
     text-transform: uppercase;
+    height: 25px;
 }

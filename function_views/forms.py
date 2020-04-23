@@ -1,5 +1,5 @@
 from django import forms
-from django.forms import CharField, Textarea, IntegerField
+from django.forms import CharField, Textarea
 
 
 class GuestBookForm(forms.Form):
@@ -11,7 +11,3 @@ class GuestBookForm(forms.Form):
                     widget=Textarea(attrs={'cols': '30', 'rows': '5'}),
                     min_length=10)
 
-
-class ViewUserProfile(forms.Form):
-    id = IntegerField(required=True,
-                      label="Enter an ID.")

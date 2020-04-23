@@ -10,7 +10,9 @@
 
 ![Django Intro Tutorial](https://github.com/hackersandslackers/django-views-tutorial/blob/master/.github/django-views-1@2x.jpg?raw=true)
 
-Pocket reference for creating Django views (part 2 of a series). This repository contains source code for accompanying tutorial: https://hackersandslackers.com/creating-views-django/
+This repository contains source code for accompanying tutorial: https://hackersandslackers.com/creating-django-views/
+
+A working demo of this source code is hosted here: https://django.hackersandslackers.app/
 
 ## Getting Started
 

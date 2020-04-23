@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
-  <link rel="stylesheet" href="{% static 'simpleviews/css/form.css' %}">
+  <link rel="stylesheet" href="{% static 'function_views/css/form.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -13,7 +13,7 @@
     <div class="guest-form">
       <h2>Leave your message:</h2>
       <div class="form-wrapper">
-        <form action="{% url 'simple_views:form' %}" method="post">
+        <form action="{% url 'function_views:form' %}" method="post">
           {% csrf_token %}
           {% include 'partials/messages.html' %}
           {% for field in form %}

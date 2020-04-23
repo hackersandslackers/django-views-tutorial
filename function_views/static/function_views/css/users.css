@@ -51,14 +51,28 @@ label {
     text-align: center;
 }
 
+.users-table tr:nth-child(even) {
+    /*background: #f6fafd;*/
+    background: #fafdfe;
+}
+
 .users-table td {
-    padding: 15px 15px;
+    padding: 20px 15px;
     line-height: 1;
     min-width: unset;
 }
 
 .users-table th {
     min-width: unset;
+    padding: 25px 15px;
+}
+
+.user-name span {
+    font-size: 1em;
+}
+
+.user-name a {
+    color: #5e9ab7;
 }
 
 .user-profile-link {

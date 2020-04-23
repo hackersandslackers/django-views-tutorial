@@ -21,7 +21,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
     os.path.join(PROJECT_ROOT, "static"),
     os.path.join(BASE_DIR, "homepage/static"),
-    os.path.join(BASE_DIR, "simple_views/static"),
+    os.path.join(BASE_DIR, "function_views/static"),
     os.path.join(BASE_DIR, "class_views/static"),
 ]
 
@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'homepage',
-    'simple_views',
+    'function_views',
     'class_views',
     'model_views',
 ]
@@ -75,7 +75,6 @@ DATABASES = {
         'PASSWORD': os.environ.get('DATABASE_PASSWORD'),
         'HOST': os.environ.get('DATABASE_HOST'),
         'PORT': os.environ.get('DATABASE_PORT'),
-        'OPTIONS': {'ssl': {'ca': os.environ.get('DATABASE_CERTIFICATE')}}
     }
 }
 
@@ -116,4 +115,4 @@ USE_TZ = True
 # Etc.
 APPEND_SLASH = True
 
-GITHUB_REPO = 'Demo for creating views in Django (View on <a href="https://github.com/hackersandslackers/django-views-tutorial">Github</a>).'
+GITHUB_REPO = 'https://github.com/hackersandslackers/django-views-tutorial'
