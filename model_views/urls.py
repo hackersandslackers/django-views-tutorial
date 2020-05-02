@@ -10,4 +10,4 @@ urlpatterns = [
     path('delete', views.DeleteClassView.as_view(), name='delete'),
     path('list', views.ListClassView.as_view(), name='list'),
     path('detail', views.DetailClassView.as_view(), name='detail'),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
