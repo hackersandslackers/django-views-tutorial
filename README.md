@@ -16,7 +16,11 @@ A working demo of this source code is hosted here: https://django.hackersandslac
 
 ## Getting Started
 
-Installation is recommended with [Pipenv](https://pipenv-fork.readthedocs.io/en/latest/):
+Deploy this repository by _installing the proper dependencies_ and _setting configuration values_.
+
+### Installation 
+
+Installation via [Pipenv](https://pipenv-fork.readthedocs.io/en/latest/):
 
 ```shell
 $ git clone https://github.com/hackersandslackers/django-views-tutorial.git
@@ -26,13 +30,33 @@ $ pipenv update
 $ python3 manage.py runserver
 ```
 
-Alternatively, try installing via `requirements.txt` in your choice of virtual environment:
+Installation via `requirements.txt`:
 
 ```shell
 $ git clone https://github.com/hackersandslackers/django-views-tutorial.git
 $ cd django-views-tutorial
+$ python3 -m venv myenv
+$ source myenv/bin/activate
 $ pip3 install -r requirements.txt
 $ python3 manage.py runserver
+```
+
+### Configuration
+
+Configuration is handled by creating a **django_views_tutorial/.env** file. This should contain the following variables (replace the values with your own):
+
+```.env
+DEBUG=True
+SECRET_KEY="YOURSECRETKEY"
+DJANGO_SETTINGS_MODULE="django_views_tutorial.settings"
+
+DATABASE_ENGINE="django.db.backends.mysql"
+DATABASE_NAME="mydatabasename"
+DATABASE_USER="user"
+DATABASE_PASSWORD="password"
+DATABASE_HOST="mydatabase.mycloud.com"
+DATABASE_PORT=3306
+DATABASE_CERTIFICATE="../creds/ca-certificate.crt" (optional)
 ```
 
 -----

@@ -10,4 +10,4 @@ urlpatterns = [
     path('list', views.ProtectedClassView.as_view(), name='protected_view'),
     path('redirect', views.RedirectClassView.as_view(), name='redirect_view'),
     path('contact', views.ContactView.as_view(), name='contact_view'),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

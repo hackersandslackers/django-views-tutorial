@@ -2,7 +2,7 @@
     width: 800px;
     max-width: 93%;
     height: fit-content;
-    margin: 40px auto 0;
+    margin: 40px auto 20px;
     padding: 50px;
     background: white;
     box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);
@@ -16,9 +16,10 @@
 }
 
 .user-avatar {
-    height: 137px;
+    height: 117px;
     width: auto;
     margin-right: 25px;
+    border-radius: 3px;
 }
 
 .account-header {
@@ -51,9 +52,13 @@
     margin-top: 20px;
 }
 
+.user-personal-info {
+    display: flex;
+    margin: 20px 0;
+}
+
 .user-personal-info .meta {
-    font-size: 1.1em;
-    margin-bottom: 8px;
+    font-size: 1.2em;
 }
 
 .user-social-profiles .meta {
