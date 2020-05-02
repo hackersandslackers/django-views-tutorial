@@ -10,4 +10,4 @@ urlpatterns = [
     path('form/', views.form_template_view, name='form'),
     path('users/', views.user_profile_list_view, name='users'),
     path('users/<int:user_id>/', views.user_profile_view),
-] + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
