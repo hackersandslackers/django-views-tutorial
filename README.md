@@ -17,7 +17,7 @@ A working demo of this source code is hosted here: https://django.hackersandslac
 
 ## Installation
 
-Installation via `requirements.txt`:
+**Installation via `requirements.txt`**:
 
 ```shell
 $ git clone https://github.com/hackersandslackers/django-views-tutorial.git
@@ -28,7 +28,7 @@ $ pip3 install -r requirements.txt
 $ python3 manage.py runserver
 ```
 
-Installation via [Pipenv](https://pipenv-fork.readthedocs.io/en/latest/):
+**Installation via [Pipenv](https://pipenv-fork.readthedocs.io/en/latest/)**:
 
 ```shell
 $ git clone https://github.com/hackersandslackers/django-views-tutorial.git
