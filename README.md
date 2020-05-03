@@ -14,21 +14,8 @@ This repository contains source code for accompanying tutorial: https://hackersa
 
 A working demo of this source code is hosted here: https://django.hackersandslackers.app/
 
-## Getting Started
 
-Deploy this repository by _installing the proper dependencies_ and _setting configuration values_.
-
-### Installation 
-
-Installation via [Pipenv](https://pipenv-fork.readthedocs.io/en/latest/):
-
-```shell
-$ git clone https://github.com/hackersandslackers/django-views-tutorial.git
-$ cd django-views-tutorial
-$ pipenv shell
-$ pipenv update
-$ python3 manage.py runserver
-```
+## Installation
 
 Installation via `requirements.txt`:
 
@@ -41,15 +28,23 @@ $ pip3 install -r requirements.txt
 $ python3 manage.py runserver
 ```
 
-### Configuration
+Installation via [Pipenv](https://pipenv-fork.readthedocs.io/en/latest/):
+
+```shell
+$ git clone https://github.com/hackersandslackers/django-views-tutorial.git
+$ cd django-views-tutorial
+$ pipenv shell
+$ pipenv update
+$ python3 manage.py runserver
+```
+
+## Configuration
 
 Configuration is handled by creating a **django_views_tutorial/.env** file. This should contain the following variables (replace the values with your own):
 
 ```.env
-DEBUG=True
 SECRET_KEY="YOURSECRETKEY"
 DJANGO_SETTINGS_MODULE="django_views_tutorial.settings"
-
 DATABASE_ENGINE="django.db.backends.mysql"
 DATABASE_NAME="mydatabasename"
 DATABASE_USER="user"
