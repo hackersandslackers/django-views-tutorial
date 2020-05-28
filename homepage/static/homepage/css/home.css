@@ -35,7 +35,7 @@
     font-size: 1.08em;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .section-title {
         font-size: 1.1em !important;
     }
@@ -51,6 +51,7 @@
 @media (max-width: 600px) {
     .site-title {
         font-size: 1.7em;
+        margin-top: 10px;
     }
 
     .apps-container {
@@ -66,8 +67,9 @@
     }
 
     .card {
-        padding: 40px;
+        padding: 35px 25px;
         margin: 0;
+        height: 100%;
     }
 }
 
