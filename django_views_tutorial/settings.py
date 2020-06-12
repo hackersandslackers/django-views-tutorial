@@ -1,12 +1,12 @@
+"""Django's settings."""
 import os
 import environ
 import mimetypes
 
 mimetypes.add_type("text/css", ".css", True)
 
-root = environ.Path(__file__) - 3  # get root of the project
 env = environ.Env()
-environ.Env.read_env()  # reading .env file
+environ.Env.read_env()
 
 # False if not in os.environ
 DEBUG = env('DEBUG')

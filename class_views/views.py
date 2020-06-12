@@ -1,13 +1,12 @@
+"""Examples of class-based views."""
 from datetime import datetime
 
 from django.http import HttpResponseRedirect
 from django.conf import settings
-
 from django.views import View
 from django.views.generic import RedirectView
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import FormView
-
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.core.mail import send_mail
@@ -17,6 +16,7 @@ from .models import PostModel
 
 
 class GenericClassView(View):
+    """Generic class-based view."""
     initial = {'key': 'value'}
 
     def get(self, request, *args, **kwargs):
@@ -32,6 +32,7 @@ class GenericClassView(View):
 
 
 class TemplateClassView(TemplateView):
+    """Serve a page template."""
     template_name = 'class_views/template_class_view.html'
 
     # change the get method to get_context_data
@@ -44,6 +45,8 @@ class TemplateClassView(TemplateView):
 
 
 class ProtectedClassView(PermissionRequiredMixin, TemplateView):
+    """Serve a page template to authorized users."""
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['now'] = datetime.now()
@@ -51,6 +54,7 @@ class ProtectedClassView(PermissionRequiredMixin, TemplateView):
 
 
 class RedirectClassView(RedirectView):
+    """Permanent redirect view."""
     # https://docs.djangoproject.com/en/3.0/ref/class-based-views/base/#redirectview
     permanent = False
     query_string = True
@@ -63,6 +67,7 @@ class RedirectClassView(RedirectView):
 
 
 class ContactView(FormView):
+    """Form-based view."""
     template_name = 'class_views/contact_class_template.html'
     form_class = ContactForm
     success_url = '/success/'

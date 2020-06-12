@@ -40,18 +40,20 @@ $ python3 manage.py runserver
 
 ## Configuration
 
-Configuration is handled by creating a **django_views_tutorial/.env** file. This should contain the following variables (replace the values with your own):
+Configuration is handled by creating a **django_views_tutorial/.env** file (see **.env.example** for reference) Replace values with your own:
 
 ```.env
-SECRET_KEY="YOURSECRETKEY"
+DEBUG=True
+SECRET_KEY="yoursecretkey"
 DJANGO_SETTINGS_MODULE="django_views_tutorial.settings"
-DATABASE_ENGINE="django.db.backends.mysql"
-DATABASE_NAME="mydatabasename"
-DATABASE_USER="user"
-DATABASE_PASSWORD="password"
-DATABASE_HOST="mydatabase.mycloud.com"
-DATABASE_PORT=3306
-DATABASE_CERTIFICATE="../creds/ca-certificate.crt" (optional)
+
+DATABASE_ENGINE=django.db.backends.mysql
+DATABASE_NAME=databasename
+DATABASE_USER=username
+DATABASE_PASSWORD=password
+DATABASE_HOST=0.0.0.0
+DATABASE_PORT=1234
+DATABASE_CERTIFICATE="../creds/ca-certificate.crt" # (optional)
 ```
 
 -----

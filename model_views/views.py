@@ -1,3 +1,4 @@
+"""Examples of model-based views."""
 from django.http import HttpResponse
 from django.views.generic import ListView, DetailView
 from .models import PostModel
