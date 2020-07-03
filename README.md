@@ -38,6 +38,16 @@ $ pipenv update
 $ python3 manage.py runserver
 ```
 
+**Installation via [Poetry](https://python-poetry.org/)**:
+
+```shell
+$ git clone https://github.com/hackersandslackers/django-views-tutorial.git
+$ cd django-views-tutorial
+$ poetry shell
+$ poetry update
+$ python3 manage.py runserver
+```
+
 ## Configuration
 
 Configuration is handled by creating a **django_views_tutorial/.env** file (see **.env.example** for reference) Replace values with your own:
