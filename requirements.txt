@@ -1,5 +1,5 @@
 asgiref==3.2.7
-Django==3.0.7
+Django==3.1
 django-environ==0.4.5
 mysqlclient==1.4.6
 python-dotenv==0.13.0
