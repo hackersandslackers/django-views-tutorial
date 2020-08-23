@@ -1,6 +1,7 @@
-asgiref==3.2.7
-Django==3.1
+-i https://pypi.org/simple/
+asgiref==3.2.10
 django-environ==0.4.5
+django==3.1
 mysqlclient==1.4.6
 python-dotenv==0.13.0
 pytz==2020.1
