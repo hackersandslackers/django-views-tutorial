@@ -6,12 +6,12 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('function_views', '0004_auto_20200421_1657'),
+        ("function_views", "0004_auto_20200421_1657"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='user',
-            name='facebook_profile',
+            model_name="user",
+            name="facebook_profile",
         ),
     ]

@@ -7,28 +7,27 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Message',
+            name="Message",
             fields=[
-                ('id', models.AutoField(primary_key=True, serialize=False)),
-                ('name', models.CharField(max_length=255)),
-                ('message', models.TextField()),
-                ('created_at', models.DateTimeField()),
+                ("id", models.AutoField(primary_key=True, serialize=False)),
+                ("name", models.CharField(max_length=255)),
+                ("message", models.TextField()),
+                ("created_at", models.DateTimeField()),
             ],
         ),
         migrations.CreateModel(
-            name='User',
+            name="User",
             fields=[
-                ('id', models.AutoField(primary_key=True, serialize=False)),
-                ('name', models.CharField(max_length=50)),
-                ('email', models.EmailField(max_length=254)),
-                ('avatar', models.CharField(max_length=250, null=True)),
-                ('website', models.URLField()),
-                ('created_at', models.DateTimeField()),
+                ("id", models.AutoField(primary_key=True, serialize=False)),
+                ("name", models.CharField(max_length=50)),
+                ("email", models.EmailField(max_length=254)),
+                ("avatar", models.CharField(max_length=250, null=True)),
+                ("website", models.URLField()),
+                ("created_at", models.DateTimeField()),
             ],
         ),
     ]

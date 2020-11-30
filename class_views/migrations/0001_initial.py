@@ -7,14 +7,13 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='PostModel',
+            name="PostModel",
             fields=[
-                ('id', models.AutoField(primary_key=True, serialize=False)),
+                ("id", models.AutoField(primary_key=True, serialize=False)),
             ],
         ),
     ]

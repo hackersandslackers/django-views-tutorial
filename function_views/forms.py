@@ -5,15 +5,11 @@ from django.forms import CharField, Textarea
 
 class GuestBookForm(forms.Form):
     """Form to accept guestbook submissions."""
-    name = CharField(
-        label="Your name",
-        required=True,
-        strip=True
-    )
+
+    name = CharField(label="Your name", required=True, strip=True)
     msg = CharField(
         label="Leave a message.",
         required=True,
-        widget=Textarea(attrs={'cols': '30', 'rows': '5'}),
-        min_length=10
+        widget=Textarea(attrs={"cols": "30", "rows": "5"}),
+        min_length=10,
     )
-

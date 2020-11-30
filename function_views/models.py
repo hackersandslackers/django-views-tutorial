@@ -4,6 +4,7 @@ from django.db import models
 
 class User(models.Model):
     """User account model."""
+
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50)
     email = models.EmailField(null=False)
@@ -19,6 +20,7 @@ class User(models.Model):
 
 class Message(models.Model):
     """Guestbook message model."""
+
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
     message = models.TextField()
