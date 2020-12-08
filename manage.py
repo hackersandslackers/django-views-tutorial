@@ -2,6 +2,10 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+from ddtrace import patch_all
+
+
+patch_all()
 
 
 def main():
