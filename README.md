@@ -22,8 +22,8 @@ A working demo of this source code is hosted here: https://django.hackersandslac
 ```shell
 $ git clone https://github.com/hackersandslackers/django-views-tutorial.git
 $ cd django-views-tutorial
-$ python3 -m venv myenv
-$ source myenv/bin/activate
+$ python3 -m venv venv
+$ source venv/bin/activate
 $ pip3 install -r requirements.txt
 $ python3 manage.py runserver
 ```

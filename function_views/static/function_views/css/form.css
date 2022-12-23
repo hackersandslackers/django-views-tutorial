@@ -1,6 +1,8 @@
 .form-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   align-items: flex-start;
+  grid-column-gap: 20px;
   justify-content: space-between;
   width: 900px;
   max-width: 100%;

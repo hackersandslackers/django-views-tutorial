@@ -1,7 +1,6 @@
 """Django's settings."""
 import mimetypes
-import os
-
+from os import path, getenv
 import environ
 
 mimetypes.add_type("text/css", ".css", True)
@@ -12,22 +11,22 @@ environ.Env.read_env()
 # False if not in os.environ
 DEBUG = env("DEBUG")
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+# Build paths inside the project like this: path.join(BASE_DIR, ...)
+BASE_DIR = path.dirname(path.dirname(path.abspath(__file__)))
+PROJECT_ROOT = path.dirname(path.abspath(__file__))
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = path.join(BASE_DIR, "static")
 STATICFILES_DIRS = [
-    os.path.join(PROJECT_ROOT, "static"),
-    os.path.join(BASE_DIR, "homepage/static"),
-    os.path.join(BASE_DIR, "function_views/static"),
-    os.path.join(BASE_DIR, "class_views/static"),
+    path.join(PROJECT_ROOT, "static"),
+    path.join(BASE_DIR, "homepage/static"),
+    path.join(BASE_DIR, "function_views/static"),
+    path.join(BASE_DIR, "class_views/static"),
 ]
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = environ.get("SECRET_KEY")
 
 # Basic config
 ALLOWED_HOSTS = [
@@ -75,11 +74,11 @@ ROOT_URLCONF = "django_views_tutorial.urls"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": os.environ.get("DATABASE_NAME"),
-        "USER": os.environ.get("DATABASE_USER"),
-        "PASSWORD": os.environ.get("DATABASE_PASSWORD"),
-        "HOST": os.environ.get("DATABASE_HOST"),
-        "PORT": os.environ.get("DATABASE_PORT"),
+        "NAME": environ.get("DATABASE_NAME"),
+        "USER": environ.get("DATABASE_USER"),
+        "PASSWORD": environ.get("DATABASE_PASSWORD"),
+        "HOST": environ.get("DATABASE_HOST"),
+        "PORT": environ.get("DATABASE_PORT"),
     }
 }
 
@@ -103,7 +102,7 @@ AUTH_PASSWORD_VALIDATORS = [
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, "django_views_tutorial/templates/")],
+        "DIRS": [path.join(BASE_DIR, "django_views_tutorial/templates/")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
