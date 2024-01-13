@@ -83,10 +83,6 @@ DATABASES = {
     }
 }
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-<<<<<<< HEAD
-
-=======
->>>>>>> 458242c3b68e332a9df47bcc287574a8cc6c8035
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
