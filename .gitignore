@@ -104,6 +104,10 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+# WSGI
+.uwsgi_plugins_builder/
+
+# IDEs
 .DS_Store
 .idea
 creds
