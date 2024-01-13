@@ -31,10 +31,10 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # Basic config
 ALLOWED_HOSTS = [
-    # "0.0.0.0",
-    # "127.0.0.1",
-    # "localhost",
-    # "127.0.0.1:8000",
+    "0.0.0.0",
+    "127.0.0.1",
+    "localhost",
+    "127.0.0.1:8000",
     "django.hackersandslackers.com",
 ]
 
@@ -83,7 +83,10 @@ DATABASES = {
     }
 }
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 458242c3b68e332a9df47bcc287574a8cc6c8035
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
