@@ -1,6 +1,6 @@
 # Django Views Tutorial
 
-![Python](https://img.shields.io/badge/Python-v^3.8-blue.svg?logo=python&longCache=true&logoColor=white&colorB=5e81ac&style=flat-square&colorA=4c566a)
+![Python](https://img.shields.io/badge/Python-v^3.10-blue.svg?logo=python&longCache=true&logoColor=white&colorB=5e81ac&style=flat-square&colorA=4c566a)
 ![Django](https://img.shields.io/badge/Django-v^3.0.0-blue.svg?logo=Django&longCache=true&logoColor=white&colorB=a3be8c&style=flat-square&colorA=4c566a)
 ![MySQLClient](https://img.shields.io/badge/MySQLClient-v1.4.6-blue.svg?logo=mysql&longCache=true&logoColor=white&colorA=4c566a&colorB=bf616a&style=flat-square)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square&colorA=4c566a&colorB=a3be8c)
@@ -10,10 +10,9 @@
 
 ![Django Intro Tutorial](https://github.com/hackersandslackers/django-views-tutorial/blob/master/.github/django-views-1@2x.jpg?raw=true)
 
-This repository contains source code for accompanying tutorial: https://hackersandslackers.com/creating-django-views/
+This repository contains source code for accompanying tutorial: [https://hackersandslackers.com/creating-django-views/](https://hackersandslackers.com/creating-django-views/)
 
-A working demo of this source code is hosted here: https://django.hackersandslackers.app/
-
+A working demo of this source code is hosted here: [https://django.hackersandslackers.app/](https://django.hackersandslackers.app/)
 
 ## Installation
 
@@ -22,29 +21,9 @@ A working demo of this source code is hosted here: https://django.hackersandslac
 ```shell
 $ git clone https://github.com/hackersandslackers/django-views-tutorial.git
 $ cd django-views-tutorial
-$ python3 -m venv myenv
-$ source myenv/bin/activate
+$ python3 -m venv .venv
+$ source .venv/bin/activate
 $ pip3 install -r requirements.txt
-$ python3 manage.py runserver
-```
-
-**Installation via [Pipenv](https://pipenv-fork.readthedocs.io/en/latest/)**:
-
-```shell
-$ git clone https://github.com/hackersandslackers/django-views-tutorial.git
-$ cd django-views-tutorial
-$ pipenv shell
-$ pipenv update
-$ python3 manage.py runserver
-```
-
-**Installation via [Poetry](https://python-poetry.org/)**:
-
-```shell
-$ git clone https://github.com/hackersandslackers/django-views-tutorial.git
-$ cd django-views-tutorial
-$ poetry shell
-$ poetry update
 $ python3 manage.py runserver
 ```
 
