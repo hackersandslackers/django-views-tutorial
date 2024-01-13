@@ -1,0 +1,35 @@
+header {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    padding: 30px 0;
+    border-bottom: 1px solid #bac6d5;
+}
+
+.nav-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.page-title {
+    margin: 0 auto;
+}
+
+.path {
+    margin: 3px auto 0;
+    color: #5f6988;
+}
+
+.back-button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    color: #69b4d9;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 25px;
+}
