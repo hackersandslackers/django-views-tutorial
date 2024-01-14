@@ -27,7 +27,7 @@
 }
 
 .selector-chosen h2 {
-    background: #79aec8;
+    background: #0297f6;
     color: #fff;
 }
 
@@ -413,7 +413,7 @@ span.clearable-file-input label {
 }
 
 .calendar td.selected a {
-    background: #79aec8;
+    background: #0297f6;
     color: #fff;
 }
 
@@ -435,7 +435,7 @@ span.clearable-file-input label {
 
 .calendar td a:focus, .timelist a:focus,
 .calendar td a:hover, .timelist a:hover {
-    background: #79aec8;
+    background: #0297f6;
     color: white;
 }
 

@@ -4,7 +4,7 @@
     height: fit-content;
     margin: 30px auto 0;
     overflow: hidden;
-    box-shadow: 0 0 15px rgba(64, 66, 72, 0.3);
+    box-shadow: 0 0 5px rgba(64, 66, 72, 0.2);
 }
 
 tr td:first-of-type,
@@ -19,7 +19,7 @@ tr th:first-of-type {
     padding: 0 0 30px;
     border: 0;
     background: white;
-    box-shadow: 0 0 15px rgba(64, 66, 72, 0.3);
+    box-shadow: 0 0 5px rgba(64, 66, 72, 0.2);
 }
 
 @media (max-width: 800px) {
@@ -115,10 +115,10 @@ input[type="submit"] {
     -webkit-appearance: none;
     width: 60px;
     height: 40px;
-    border: 1px solid #5db9d7;
+    border: 1px solid #0297f6;
     border-radius: 0 3px 3px 0;
     color: white;
-    background: #5db9d7;
+    background: #0297f6;
     font-size: .95em;
     margin: 0;
     text-transform: uppercase;
@@ -127,7 +127,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background: white;
-    color: #5db9d7;
+    color: #0297f6;
     cursor: pointer;
 }
 

@@ -4,7 +4,6 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("function_views", "0005_remove_user_facebook_profile"),
     ]

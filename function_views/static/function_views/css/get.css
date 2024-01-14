@@ -1,6 +1,7 @@
 .container {
   width: 900px;
   margin: 0 auto 80px;
+  padding-bottom: 30px;
 }
 
 h2 {
@@ -16,14 +17,14 @@ h2 {
   width: 900px;
   max-width: 100%;
   height: fit-content;
-  margin: 50px auto 0;
+  margin: 20px auto;
 }
 
 table {
   width: 100%;
   border-radius: 4px;
   background: white;
-  box-shadow: 0 0 15px rgba(64, 66, 72, 0.3);
+  box-shadow: 0 0 5px rgba(64, 66, 72, 0.2);
   color: #353f4a;
   border-spacing: 0;
 }

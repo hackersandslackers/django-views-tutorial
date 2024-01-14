@@ -36,6 +36,7 @@ ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1:8000",
     "django.hackersandslackers.com",
+    "django.hackersandslackers.app",
 ]
 
 INTERNAL_IPS = [

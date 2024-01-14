@@ -37,9 +37,7 @@ def form_template_view(request):
     if request.method == "POST":
         form = GuestBookForm(request.POST)
         if form.is_valid():
-            Message.objects.create(
-                name=form.cleaned_data.get("name"), message=form.cleaned_data.get("msg")
-            )
+            Message.objects.create(name=form.cleaned_data.get("name"), message=form.cleaned_data.get("msg"))
             messages.success(request, "Success!")
             return HttpResponseRedirect("form")
     else:

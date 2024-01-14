@@ -1,18 +1,19 @@
-{% extends 'layout.html' %} {% load static %} {% block extra_css %}
-<link
-  rel="stylesheet"
-  href="{% static 'homepage/css/home.css' %}"
-  type="text/css"
-/>
-{% endblock %} {% block content %}
-<div class="card">
-  <img src="{% static 'homepage/img/logo.png' %}" alt="logo" class="logo" />
-  <h1 class="site-title">{{ title }}</h1>
-  <p class="subtitle">{{ description }}</p>
-  <div class="apps-container">
-    {% include 'homepage/partials/function_module.html' %} {% include
-    'homepage/partials/class_module.html' %} {% include
-    'homepage/partials/models_module.html' %}
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'homepage/css/home.css' %}" type="text/css">
+{% endblock %}
+
+{% block content %}
+  <div class="card">
+    <img src="{% static 'homepage/img/logo@2x.png' %}" alt="logo" class="logo" />
+    <h1 class="site-title">{{ title }}</h1>
+    <p class="subtitle">{{ description }}</p>
+    <div class="apps-container">
+      {% include 'homepage/partials/function_module.html' %}
+      {% include 'homepage/partials/class_module.html' %}
+      {% include 'homepage/partials/models_module.html' %}
+    </div>
   </div>
-</div>
 {% endblock %}
