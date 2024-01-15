@@ -53,12 +53,14 @@ a:hover {
     padding: 5vw;
     background: white;
     box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);
+    height: fit-content;
 }
 
 @media (max-width: 800px) {
     .card {
         margin: 0;
         width: 100%;
+        height: unset;
     }
 
     .apps-container {
