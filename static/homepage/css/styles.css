@@ -60,7 +60,7 @@ a:hover {
     .card {
         margin: 0;
         width: 100%;
-        height: unset;
+        height: max-content;
     }
 
     .apps-container {
