@@ -39,13 +39,6 @@
     .section-title {
         font-size: 1.1em !important;
     }
-
-    .card {
-        margin: 40px auto 0;
-        padding: 40px 20px;
-        width: 90%;
-        max-width: unset;
-    }
 }
 
 @media (max-width: 600px) {
@@ -67,7 +60,6 @@
     }
 
     .card {
-        padding: 35px 25px;
         margin: 0;
         height: 100%;
     }
@@ -147,7 +139,8 @@ svg {
     content: " ";
 }
 
-.tooltip-toggle::before, .tooltip-toggle::after {
+.tooltip-toggle::before,
+.tooltip-toggle::after {
     color: #efefef;
     font-family: monospace;
     font-size: 16px;
@@ -156,7 +149,10 @@ svg {
     pointer-events: none;
 }
 
-.tooltip-toggle:focus::before, .tooltip-toggle:focus::after, .tooltip-toggle:hover::before, .tooltip-toggle:hover::after {
+.tooltip-toggle:focus::before,
+.tooltip-toggle:focus::after,
+.tooltip-toggle:hover::before,
+.tooltip-toggle:hover::after {
     -webkit-transition: all 0.75s ease;
     opacity: 1;
     transition: all 0.75s ease;
@@ -165,6 +161,5 @@ svg {
 .fas,
 i {
     font-size: .9em;
-    margin-left: 3px;
     opacity: .5;
 }

@@ -6,7 +6,6 @@ from django.contrib.auth.mixins import PermissionRequiredMixin
 from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
-
 from django.views import View
 from django.views.generic import RedirectView
 from django.views.generic.base import TemplateView
@@ -18,6 +17,7 @@ from .models import PostModel
 
 class GenericClassView(View):
     """Generic class-based view."""
+
     form_class = ContactForm
     initial = {"key": "value"}
     template_name = "form_template.html"

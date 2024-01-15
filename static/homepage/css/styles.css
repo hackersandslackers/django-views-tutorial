@@ -49,18 +49,16 @@ a:hover {
 
 .card {
     width: 900px;
-    max-width: 93%;
-    height: fit-content;
-    margin: 80px auto 0;
-    padding: 50px;
+    margin: 5vw 5vw 0;
+    padding: 5vw;
     background: white;
     box-shadow: 0 0 5px rgba(65, 67, 144, 0.15);
 }
 
 @media (max-width: 800px) {
     .card {
-        padding: 40px 0;
-        width: unset;
+        margin: 0;
+        width: 100%;
     }
 
     .apps-container {
@@ -84,13 +82,7 @@ a:hover {
     }
 }
 
-@media (max-width: 600px) {
-    .card {
-        width: 90%;
-        padding: 30px;
-        margin: 0;
-    }
-
+@media (max-width: 800px) {
     .app {
         margin-bottom: 30px;
     }
