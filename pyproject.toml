@@ -1,34 +1,31 @@
-[tool.poetry]
+[project]
 name = "django_views_tutorial"
-version = "0.1.1"
+version = "0.1.2"
 description = "Function and class-based Django view repository."
-authors = ["Todd Birchard <todd@hackersandslackers.com>"]
-maintainers = ["Todd Birchard <todd@hackersandslackers.com>"]
+requires-python = ">=3.12,<4.0"
+authors = [{name = "Todd Birchard", email = "todd@hackersandslackers.com"}]
+maintainers = [{name = "Todd Birchard", email = "todd@hackersandslackers.com"}]
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/hackersandslackers/django-views-tutorial/"
-documentation = "https://hackersandslackers.com/creating-django-views/"
 keywords = ["Django", "Django Views", "MVC", "Frameworks", "Tutorial"]
-
-[tool.poetry.dependencies]
-python = ">=3.10,<4.0"
-django = "*"
-python-dotenv = "*"
-mysqlclient = "*"
-django-environ = "*"
-uwsgi = "*"
-
-[tool.poetry.dev-dependencies]
-black = "*"
-isort = "*"
-flake8 = "*"
-pylint = "*"
-pytest = "*"
-coverage = "*"
-mypy = "*"
+scripts = {run = "django_views_tutorial.wsgi:application"}
+dependencies= [
+    "django>=3.0.0,<5.0.0",
+    "python-dotenv>=1.1.0",
+    "mysqlclient>=2.2.7",
+    "django-environ>=0.12.0",
+    "gunicorn>=23.0.0",
+    "black>=25.1.0",
+    "isort>=6.0.1",
+    "flake8>=7.2.0",
+    "pylint>=3.3.7",
+    "pytest>=8.3.5",
+    "coverage>=7.8.0",
+    "mypy>=1.15.0"
+]
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.pylint.'MESSAGES CONTROL']
@@ -42,9 +39,3 @@ profile = "black"
 
 [tool.pylint.format]
 max-line-length = "120"
-
-[tool.poetry.scripts]
-run = "django_views_tutorial.wsgi:application"
-
-[tool.poetry.urls]
-issues = "https://github.com/hackersandslackers/django-views-tutorial/issues"

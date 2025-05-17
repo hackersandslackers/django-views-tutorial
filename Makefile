@@ -57,7 +57,7 @@ test: env
 .PHONY: update
 update: env
 	$(LOCAL_PYTHON) -m pip install --upgrade pip setuptools wheel && \
-	poetry update --with dev && \
+	poetry update && \
 	poetry export -f requirements.txt --output requirements.txt --without-hashes && \
 	echo Installed dependencies in \`${VIRTUAL_ENV}\`;
 

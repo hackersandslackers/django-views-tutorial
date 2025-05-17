@@ -1,6 +1,6 @@
 # Django Views Tutorial
 
-![Python](https://img.shields.io/badge/Python-v^3.10-blue.svg?logo=python&longCache=true&logoColor=white&colorB=5e81ac&style=flat-square&colorA=4c566a)
+![Python](https://img.shields.io/badge/Python-v^3.12-blue.svg?logo=python&longCache=true&logoColor=white&colorB=5e81ac&style=flat-square&colorA=4c566a)
 ![Django](https://img.shields.io/badge/Django-v^3.0.0-blue.svg?logo=Django&longCache=true&logoColor=white&colorB=a3be8c&style=flat-square&colorA=4c566a)
 ![MySQLClient](https://img.shields.io/badge/MySQLClient-v1.4.6-blue.svg?logo=mysql&longCache=true&logoColor=white&colorA=4c566a&colorB=bf616a&style=flat-square)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square&colorA=4c566a&colorB=a3be8c)
