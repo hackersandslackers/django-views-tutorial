@@ -342,20 +342,28 @@ files = [
 
 [[package]]
 name = "mysqlclient"
-version = "2.2.1"
+version = "2.3.2"
 description = "Python interface to MySQL"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.10"
 files = [
-    {file = "mysqlclient-2.2.1-cp310-cp310-win_amd64.whl", hash = "sha256:c5a293baebbfcfa2905545198a54e90f1cf00f211eae6637d24930abb6432cba"},
-    {file = "mysqlclient-2.2.1-cp311-cp311-win_amd64.whl", hash = "sha256:8f40c872f19639366e3df27bef2ff087be0e3ee0bd3453470bd29f46b54a90f6"},
-    {file = "mysqlclient-2.2.1-cp312-cp312-win_amd64.whl", hash = "sha256:45600f4f321096bd1ead3355bc62cfcf8d97dc78df94e4ab5db72ecb5db1bd04"},
-    {file = "mysqlclient-2.2.1-cp38-cp38-win_amd64.whl", hash = "sha256:1f8889cc5f0141bb307b915e981a66793df663ace92259344661084a7dd8d12a"},
-    {file = "mysqlclient-2.2.1-cp39-cp39-win_amd64.whl", hash = "sha256:9db6305cdf2a1da350f827d2a19be7f2666eafd9eb8d4f7cbbac5df847d61b99"},
-    {file = "mysqlclient-2.2.1-pp310-pypy310_pp73-win_amd64.whl", hash = "sha256:97eee76818774bb695e018ff4c3dafaab74b9a0b0cf32c90b02caeec3b19cd8e"},
-    {file = "mysqlclient-2.2.1-pp38-pypy38_pp73-win_amd64.whl", hash = "sha256:4fabe1f4b545ed6244ad0ff426e6b27054b7e5c5b1392be0de2e5f2f59be0392"},
-    {file = "mysqlclient-2.2.1-pp39-pypy39_pp73-win_amd64.whl", hash = "sha256:641a7c9de443ddef186a0e89f24b4251ad44f4ddc5e7094332bf2d286d7c9e33"},
-    {file = "mysqlclient-2.2.1.tar.gz", hash = "sha256:2c7ad15b87293b12fd44b47c46879ec95ec647f4567e866ccd70b8337584e9b2"},
+    {file = "mysqlclient-2.3.2-cp310-cp310-win_amd64.whl", hash = "sha256:460aa90161897396d2eb8ddf184c4142b193730d6766ce00b86d786f0ecc66fa"},
+    {file = "mysqlclient-2.3.2-cp310-cp310-win_arm64.whl", hash = "sha256:e17c53c2b6e70554e68c1172a7e1afa19c235422c640502b81ba536ce98d0b4d"},
+    {file = "mysqlclient-2.3.2-cp311-cp311-win_amd64.whl", hash = "sha256:dbf72d453ad3e1b65e75a05a6fb368696f5b3cb4d60467c0aec3220d3069d25c"},
+    {file = "mysqlclient-2.3.2-cp311-cp311-win_arm64.whl", hash = "sha256:431318d0b3403fce22a1742e81bafe3235198e1009874271283fae36a9e4340b"},
+    {file = "mysqlclient-2.3.2-cp312-cp312-win_amd64.whl", hash = "sha256:7d79b7ee8c59d5a0c45db811f4ef6af06d00a88ca31f2b2f73a96d7ec269821f"},
+    {file = "mysqlclient-2.3.2-cp312-cp312-win_arm64.whl", hash = "sha256:e5736a77a99971ae5dc5f65ccf10b0e451c95ae4f4532a2ff27ac7c8139b1c29"},
+    {file = "mysqlclient-2.3.2-cp313-cp313-win_amd64.whl", hash = "sha256:5bb714ae35226318474df07e7986a4bcf93679b1b1ca276f3f6dd28e17d9c9d1"},
+    {file = "mysqlclient-2.3.2-cp313-cp313-win_arm64.whl", hash = "sha256:1a60b897b2ac9730ed2ba0ded9ce4f90b8afc545235748df4d5966d5c3f8b00a"},
+    {file = "mysqlclient-2.3.2-cp314-cp314-win_amd64.whl", hash = "sha256:89996ea91d3c8ec2328f29b46e317dc1ab6cb0101c7207cd93b2e8c847fef594"},
+    {file = "mysqlclient-2.3.2-cp314-cp314-win_arm64.whl", hash = "sha256:90fc1534f8e219c71d3d277da78a110639d8b4587ca29dec01cebbd9e50eff8e"},
+    {file = "mysqlclient-2.3.2-cp314-cp314t-win_amd64.whl", hash = "sha256:106c5e348b0e13c173adc6e9071e8a96557316692c1887cd5bda7263f6324d01"},
+    {file = "mysqlclient-2.3.2-cp314-cp314t-win_arm64.whl", hash = "sha256:0fe6b06264f6ac760595d843562e4de7f2bd7c6fe3a88b1f6e852f0731988629"},
+    {file = "mysqlclient-2.3.2-cp315-cp315-win_amd64.whl", hash = "sha256:6451098f75fcd5151bac475a33ceda07c82e9ac61ddee5c982960e6f61033810"},
+    {file = "mysqlclient-2.3.2-cp315-cp315-win_arm64.whl", hash = "sha256:775b7bee14c8b6cf4c4104350e22a080befd6a9d4dd4eb9613936825fe6e2bd5"},
+    {file = "mysqlclient-2.3.2-cp315-cp315t-win_amd64.whl", hash = "sha256:ce31fc70eac35f4ecd13a4abc986cff78e0fce9e1fd2f0148427560512a82460"},
+    {file = "mysqlclient-2.3.2-cp315-cp315t-win_arm64.whl", hash = "sha256:e33b40ba4a994d1964a3a9a9c3cbec1c6518b5d2365cbf3b90ef9503811866be"},
+    {file = "mysqlclient-2.3.2.tar.gz", hash = "sha256:d8921cc2e8aa0e7f7c1c0b69b17e3a6f370dae235c7e7716938959dac84de4eb"},
 ]
 
 [[package]]
